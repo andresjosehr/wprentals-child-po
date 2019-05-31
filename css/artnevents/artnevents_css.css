@@ -1,0 +1,576 @@
+/*!
+ * ARTNEVENTS CSS
+ */
+
+.mess_send_reply_button,
+#change_pass,
+#update_profile,
+#book_dates,
+#aaiu-uploader,
+#set_price_dates, 
+#book_dates,
+#edit_prop_ammenities, 
+#edit_prop_locations, 
+#google_capture, 
+#edit_prop_details, 
+#edit_prop_image, 
+#edit_prop_price, 
+#edit_show_image,
+#edit_show_extra,
+#edit_prop_1,
+#edit_show_description,
+#edit_show_location,
+#form_submit_desc,
+#edit_show_price,
+#edit_show_members,
+#edit_show_1,
+#delete_selected_members,
+#edit_calendar,
+#form_submit_1,
+#submit_mess_front,
+.modal-content #wp-login-but,
+#wp-login-but_sh,
+#delete_profile,
+#user-id-uploader{
+    margin-bottom: 20px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    background-color: #b881fc;
+}
+
+#wp-submit-register_wd:hover,
+#wp-forgot-but_shortcode:hover,
+#wp-login-but-wd:hover,
+.mess_send_reply_button:hover,
+#change_pass:hover,
+#update_profile:hover,
+#book_dates:hover,
+#aaiu-uploader:hover,
+#set_price_dates:hover, 
+#book_dates:hover,
+#edit_prop_ammenities:hover, 
+#edit_prop_locations:hover, 
+#edit_prop_details:hover, 
+#edit_prop_image:hover,
+#edit_show_extra:hover, 
+#edit_prop_price:hover, 
+#edit_show_1:hover,
+#edit_show_image:hover,
+#edit_show_location:hover,
+#edit_show_description:hover,
+#edit_show_price:hover,
+#edit_show_members:hover,
+#edit_prop_1:hover,
+#form_submit_1:hover,
+#form_submit_desc:hover,
+#submit_mess_front:hover,
+.modal-content #wp-login-but:hover,
+#wp-login-but_sh,
+#delete_profile:hover,
+#user-id-uploader:hover{
+    background-color: #c18eff;
+}
+
+#edit_prop_ammenities, #edit_prop_locations, #edit_show_extra, #form_submit_desc, #edit_show_description, #edit_show_location, #edit_prop_details, #edit_show_image, #edit_prop_image, #edit_prop_price, #edit_prop_1, #edit_show_price, #edit_show_members, #edit_show_1, #edit_calendar,
+#form_submit_1{
+    max-width:200px;
+}
+
+#delete_selected_members:hover
+{
+    background-color: #FF0000;
+}
+
+#delete_selected_members
+{
+    margin-bottom: 20px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 550;
+    background-color: #610B0B;
+}
+
+#add_show_member:hover
+{
+    background-color: #01DF01;
+}
+
+#add_show_member
+{
+    margin-bottom: 20px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    background-color: #21610B;
+}
+
+#add_show_member{
+	max-width:200px;
+}
+
+#delete_selected_members{
+	max-width:220px;
+}
+
+/*CSS style.css**/
+
+.owner_read_more:hover,
+.single-estate_shows .owner_read_more:hover{
+    color:#fff;
+    opacity: 1;
+}
+
+.single-estate_shows .owner_read_more{
+    color: #fff;
+    opacity: 0.7;
+}
+
+.single-estate_shows #contact_me_long{
+    opacity: 1;
+}
+
+.single-estate_shows .verified_userid {
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 130px;
+    width: 120px;
+    border: 0px;
+}
+
+.single-estate_shows .fc .fc-axis,
+.single-estate_shows .fc-day-header {
+    background-color: #4d5567!important;
+    color: #CBCDD0!important;
+    font-size: 12px!important;
+    opacity: 1!important;
+    text-align: center;
+}
+
+/*CSS my_media**/
+
+@media only screen and (max-width: 991px){
+
+    .single-estate_shows .owner-page-wrapper .verified_userid{
+        margin-top: 130px;
+        text-align: left;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 667px){
+    .single-estate_shows .fc .fc-axis, 
+    .single-estate_shows .fc-day-header {
+        font-size: 11px!important;
+    }
+}
+
+@media only screen and (max-width: 568px){
+
+    #gmap-full,
+    #geolocation-button,
+    #gmap-next,
+    #gmap-prev,
+    #gmapzoomminus,
+    #gmapzoomplus,
+    .single-estate_shows #gmapstreet{
+        float: left;
+        margin-right: 2px;
+        margin-top:2px;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width:400px){
+
+     .single-estate_shows .booking_form_request {
+        margin-right: 10px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 1330px) and (min-width: 1178px){   
+    .show_tab_list_header,
+    .show_tab_header{
+        width:130px;
+    }
+    
+    .calendar_pad_title, .calendar_pad {
+        width: 23px;
+    }
+}
+
+@media only screen and (max-width: 1220px){ 
+    #colophon .listing-unit-img-wrapper .carousel-inner {
+        height: auto;
+    }
+    
+    #colophon .show_unit_v3 .price_unit_wrapper{
+        position: absolute;
+        left: 15px;
+        right: auto;
+        bottom: 5px;
+        top: auto;
+        float: left;
+        margin-bottom: 7px;
+        background-color: #b881fc;
+        padding: 1px 5px;
+        margin-left: 0px;
+        width: auto;
+    }
+    
+    .listing_reviews_container{
+        width:100%;
+        padding-left: 30px;
+    }
+    
+    .listingsidebar {
+        margin-top: 0px;
+    }
+    
+    .show_categs{
+        width:100%;
+    }
+    
+    .show_header{
+        padding: 0px 15px 0px 25px;
+    }
+    
+    .show_header_wrapper{
+        padding-left: 0px;
+        padding-right: 15px;
+        margin-right: 17px;
+    }
+    
+    .booking_form_request {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 31.5%;
+        max-width: none;
+        
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 31.5%;
+        max-width: none;
+    }
+
+    .col-md-pull-8.booking_form_request{
+        left: auto;
+        right: 69.26666667%;
+        position: relative;
+        float: left;
+    }
+    
+    .show_page_container.for_reviews {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .listing_type_1 .show_page_container.for_reviews{
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .listing-content{
+        padding: 0px 10px;
+    }
+    
+    .owner-page-wrapper-inside {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .owner-page-wrapper-reviews .owner-page-wrapper-inside {
+        padding: 0px 10px 60px 10px;
+    }
+    
+
+    .owner-page-wrapper .verified_userid {
+        margin: 10px 0px 0px 10px; 
+    }
+    
+    .single-estate_show .owner-page-wrapper .verified_userid{
+        margin-top: 130px;
+        margin-left: -5px;
+    }
+    
+    .image_gallery{
+        width:33.3%!important;
+        border-right: 6px solid #f1f3f7!important;
+    }
+
+    .imagebody_new .image_gallery {
+        border-bottom: 1px solid #f1f3f7;
+        border-right: 1px solid #f1f3f7!important;
+        float: left;
+    }    
+
+    .header_wrapper_inside{
+        width: 100%;
+    }
+    
+    #colophon {
+        width: 100%;
+        float:left;
+    }
+    
+    #footer-widget-area {
+        padding: 0px 7px 25px 7px;
+    }
+    
+    #colophon .price_unit_wrapper{
+        left: 0px;
+    }
+    
+    #colophon .listing-unit-img-wrapper{
+        max-width: 100%;    
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    #colophon .category_name {
+        padding: 0px 0px 30px 0px;
+    }
+    
+    #colophon .featured_show .category_name {
+       padding: 8px 10px;
+    }
+    
+    .entry-prop,
+    .listing_main_image_location,
+    .listing_main_image_price{
+        width: 100%;
+        margin-left: 0px;
+        left: 0px;
+        padding: 0px 20px;  
+    }
+
+    .listing_type_1 .entry-prop{
+        padding: 0px;
+    }
+    
+    .listing-type_1 .listing_main_image_location{
+        padding: 0px!important;
+    }
+    
+    .gmap-controls, #gmap-controls-wrapper {
+        width: 100%;
+        margin-left: 0px;
+        left: 0px;
+        padding: 0px 45px;
+    } 
+    
+    #search_wrapper{
+        width: 100%;
+        left: 0px;
+        margin: 0px;
+        float: left;
+    }
+    
+    #search_wrapper.type2 {
+        width: 1000px;
+        margin-left: -500px;
+        left: 50%;
+    }
+    
+    .adv-search-1{
+        width: 100%;
+        padding: 20px 20px;
+        left: 0px;
+        margin-left: 0px;
+    }
+    
+    #search_wrapper.with_search_form_float.sticky_adv .adv-search-1, 
+    #search_wrapper.with_search_on_end .adv-search-1, #search_wrapper.with_search_on_start .adv-search-1 {
+        max-width: 100%;
+        padding: 20px 20px;
+    }
+    
+    #search_wrapper.search_wr_type3.with_search_on_end, 
+    #search_wrapper.search_wr_type3.with_search_on_start {
+        padding: 0px 20px;
+    }
+
+    
+    
+    .theme_slider_wrapper .carousel-indicators {
+        display:none;
+    }
+    
+    .dashboard-margin-nolog{
+        width:100%;
+    } 
+    
+    .no_log_submit .user_dashboard_panel {
+        margin: 0px 0px;
+        padding: 0px 25px;
+        width: 100%;
+    }
+
+    .dashboard-header h1{
+        padding-left: 0px;
+        margin-left: 20px!important;
+    }
+    .content_wrapper_dashboard .entry-title {
+        margin: 15px 0px 0px 25px;
+    }
+    .top_bar{
+        width:100%;
+    }
+    
+    .similar_listings_wrapper{
+        padding: 60px 15px 30px 15px;
+    }
+    
+    .similar_listings{
+        width:100%;
+    }
+    
+   
+}
+
+/*CSS admin.css**/
+
+#estate_shows-sectionid #shows_address {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#estate_shows-sectionid .algolia-places {
+    width: 250px;
+}
+
+#estate_shows-sectionid .algolia-places .button.ap-input-icon.ap-icon-pin {
+    position: absolute;
+    float: right;
+    right: 10px;
+    left: auto;
+}
+
+#estate_shows-googlemap input[type=text],
+#estate_shows-custom input[type=text],
+#estate_shows-propdetails input[type=text],
+#estate_shows-sectionid input[type=text],
+#estate_shows-sectionid select,
+#estate_shows-custom select,
+.post-type-estate_shows select#embed_video_type,
+.post-type-estate_shows select#shows_agent,
+.post-type-estate_shows select#sidebar_option,
+.post-type-estate_shows select#sidebar_select,
+.post-type-estate_shows select#checkin_change_over,
+.post-type-estate_shows select#checkin_checkout_change_over,
+.post-type-estate_shows select#city_fee_per_day,
+.post-type-estate_shows select#cleaning_fee_per_day,
+.post-type-estate_shows select#page_custom_zoom{
+    width: 250px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 2px;
+}
+
+
+
+#estate_shows-googlemap textarea,
+#estate_shows-custom textarea,
+#estate_shows-propdetails textarea,
+#estate_shows-sectionid textarea{
+        width:250px;
+}
+
+@media only screen and (max-width: 1024px){
+    .post-type-estate_shows td {
+        width: 50%;
+        float: left;
+    }
+    #estate_shows-googlemap input[type=text], 
+    #estate_shows-custom input[type=text], 
+    #estate_shows-propdetails input[type=text], 
+    #estate_shows-sectionid input[type=text], 
+    #estate_shows-sectionid select, 
+    #estate_shows-custom select, 
+    .post-type-estate_shows select#embed_video_type, 
+    .post-type-estate_shows select#shows_agent, 
+    .post-type-estate_shows select#sidebar_option, 
+    .post-type-estate_shows select#sidebar_select, 
+    .post-type-estate_shows select#checkin_change_over, 
+    .post-type-estate_shows select#checkin_checkout_change_over, 
+    .post-type-estate_shows select#city_fee_per_day, 
+    .post-type-estate_shows select#cleaning_fee_per_day, 
+    .post-type-estate_shows select#page_custom_zoom {
+        width: calc(100% - 10px);
+        height: 36px;
+        line-height: 36px;
+        border-radius: 2px;
+        margin-right: 10px;
+        max-width: 100%!important;
+    }
+    .post-type-estate_shows #estate_shows-custom .metacustom{
+        float: left;
+        width: 50%;
+    }
+    #estate_shows-googlemap textarea, 
+    #estate_shows-custom textarea, 
+    #estate_shows-propdetails textarea, 
+    #estate_shows-sectionid textarea {
+        width: calc(100% - 10px);
+    }
+    #estate_shows-sectionid .algolia-places {
+        width: calc(100% - 10px);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .post-type-estate_shows td {
+        width: 100%;
+        float: left;
+    }
+    #estate_shows-googlemap input[type=text], 
+    #estate_shows-custom input[type=text], 
+    #estate_shows-propdetails input[type=text], 
+    #estate_shows-sectionid input[type=text], 
+    #estate_shows-sectionid select, 
+    #estate_shows-custom select, 
+    .post-type-estate_shows select#embed_video_type, 
+    .post-type-estate_shows select#shows_agent, 
+    .post-type-estate_shows select#sidebar_option, 
+    .post-type-estate_shows select#sidebar_select, 
+    .post-type-estate_shows select#checkin_change_over, 
+    .post-type-estate_shows select#checkin_checkout_change_over, 
+    .post-type-estate_shows select#city_fee_per_day, 
+    .post-type-estate_shows select#cleaning_fee_per_day, 
+    .post-type-estate_shows select#page_custom_zoom {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 2px;
+        margin-right: 10px;
+        max-width: 100%!important;
+    }
+    .post-type-estate_shows #estate_shows-custom .metacustom{
+        float: left;
+        width: 100%;
+    }
+    #estate_shows-googlemap textarea, 
+    #estate_shows-custom textarea, 
+    #estate_shows-propdetails textarea, 
+    #estate_shows-sectionid textarea {
+        width: 100%;
+    }
+    #estate_shows-sectionid .algolia-places {
+        width: 100%;
+    }
+}
+
+
+

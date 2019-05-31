@@ -1,0 +1,410 @@
+/*
+Theme Name: WpRentals Child theme
+Theme URI: http://themeforest.net/user/annapx
+Description: Ultimate WordPress Theme created by WP Estate for accomodation booking. WP Rentals is clean, flexible, fully responsive and retina Ready. Its smart settings allows you to build outstanding renting websites easy and fast.
+Version: 1.00
+Author: wpestate
+Author URI: http://themeforest.net/user/annapx
+Tags: white, one-column, two-columns,left-sidebar, right-sidebar, fluid-layout , custom-menu, theme-options, translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:     wprentals
+Text Domain:  wpestate-child
+-------------------------------------------------------------- */
+
+
+#guest_no_drop:after, 
+#guest_no_shortcode:after, 
+#guest_no_mobile:after, 
+#booking_guest_no_wrapper:after, 
+#guest_no_widget:after, 
+#guest_no:after,
+#guest_no_mobile:after,
+#booking_guest_no_wrapper:after,
+#guest_no_widget:after,
+#guest_no:after,
+#guest_no_shortcode:after, 
+#guest_no_mobile:after, 
+#booking_guest_no_wrapper:after, 
+#guest_no_widget:after, 
+#guest_no:after{
+    background-image: url('css/css-images/icon_guest.png');
+
+}
+
+#topbarregister:before{
+    content: "";
+    background-image: url('css/css-images/header_icons.png');
+ }
+
+#topbarlogin:before{
+    content:"";
+    background-image: url('css/css-images/header_icons.png');
+}
+
+.property_location .inforoom {
+    font-size: 13px;
+    background-image: url('./css/css-images/icon_bed1.png');
+}
+
+.property_location .infoguest {
+    font-size: 13px;
+    background-image: url('./css/css-images/icon_bath1.png');
+ }
+
+
+.property_location .infosize {
+    background-image: url('./css/css-images/icon-size1.png');
+}
+
+
+.panel-title-arrow {
+    background-image: url('css/css-images/property_arrows.png');
+}
+
+.panel-title.collapsed .panel-title-arrow {
+    background-image: url('css/css-images/property_arrows.png');
+    background-position: 2px 0px;
+}
+
+.calendar_icon:after {
+    content: " ";
+    background-image: url('css/css-images/calendar_icon.png');
+}
+
+.rooms_icon:after {
+    content: " ";
+    background-image: url('css/css-images/door_icon.png');
+ }
+
+.types_icon:after {
+    content: " ";
+    background-image: url('css/css-images/types_icon.png');
+}
+
+.actions_icon:after {
+    content: " ";
+    background-image: url('css/css-images/category_icon.png');
+ }
+
+.bedrooms_icon:after {
+    content: " ";
+    background-image: url('css/css-images/bedrooms_icon.png');
+}
+
+.baths_icon:after {
+    content: " ";
+    background-image: url('css/css-images/bathrooms_icon.png');
+ 
+}
+
+
+
+
+.map_icon:after {
+    background-image: url('css/css-images/icon_pin.png');
+
+}
+
+.show_tab_list_header{
+    width: 150px;
+    float: left;
+    background-color: #4D5567;
+    color: #CBCDD0;
+    height: 35px;
+    border-bottom: 1px solid #CBCDD0;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.show_tab_list_header a{
+    font-size:12px;   
+    color: #CBCDD0;
+}
+
+@media only screen and (max-width: 1330px) and (min-width: 1178px){   
+    .show_tab_list_header,
+    .show_tab_header{
+        width:130px;
+    }
+    
+    .calendar_pad_title, .calendar_pad {
+        width: 23px;
+    }
+}
+
+
+
+.show_tab_list_header_pending{
+    width: 150px;
+    float: left;
+    background-color: #cc0000;
+    color: #CBCDD0;
+    height: 35px;
+    border-bottom: 1px solid #CBCDD0;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.show_tab_list_header_pending a{
+    font-size:12px;   
+    color: #CBCDD0;
+}
+
+@media only screen and (max-width: 1330px) and (min-width: 1178px){   
+    .show_tab_list_header_pending,
+    .show_tab_header_pending{
+        width:130px;
+    }
+    
+    .calendar_pad_title, .calendar_pad {
+        width: 23px;
+    }
+}
+
+
+/*Calendar booking
+-------------------------------------------------------------------------------*/
+.calendar-pending{
+    position:relative;
+}
+
+.booking-calendar-wrapper-in-price .calendar-pending
+.booking-calendar-wrapper-in .calendar-pending{
+    cursor:pointer;
+}
+
+.calendar_pad_title.calendar-pad-hover,
+.calendar-pending.calendar_pad.has_future.calendar-pad-hover,
+.calendar-reserved.calendar_pad.calendar-pad-hover,
+.calendar-pad-hover{
+    background-color: #D2DCED!important;
+}
+
+.calendar-pending.calendar_pad.has_future{
+    background-color: #cc0000;
+}
+
+.calendar-pending.calendar_pad.has_future.calendar-reserved-start,
+.calendar-free.calendar_pad.has_future.calendar-reserved-stop{
+     background-color: red;
+}
+
+.calendar-pending.calendar_pad.has_future.end_reservation{
+    /*background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#b881fc), color-stop(50%,#fff));*/
+    background: #fff9f9;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, #b881fc 0%, #b881fc 49%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#b881fc), color-stop(49%,#b881fc), color-stop(50%,#ffffff), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(-45deg, #b881fc 0%,#b881fc 49%,#ffffff 50%,#ffffff 100%);
+    background: -o-linear-gradient(-45deg, #b881fc 0%,#b881fc 49%,#ffffff 50%,#ffffff 100%);
+    background: -ms-linear-gradient(-45deg, #b881fc 0%,#b881fc 49%,#ffffff 50%,#ffffff 100%);
+    background: linear-gradient(125deg, #b881fc 0%,#b881fc 49%,#ffffff 50%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b881fc', endColorstr='#ffffff',GradientType=1 );
+}
+.calendar-pending.calendar_pad.has_future.end_reservation.end_allinone_internal_booking{
+   /*background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#45cd72), color-stop(50%,#fff));*/
+    background: #fff9f9;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(-45deg, #45cd72 0%, #45cd72 49%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#45cd72), color-stop(49%,#45cd72), color-stop(50%,#ffffff), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(-45deg, #45cd72 0%,#b881fc 49%,#ffffff 50%,#ffffff 100%);
+    background: -o-linear-gradient(-45deg, #45cd72 0%,#45cd72 49%,#ffffff 50%,#ffffff 100%);
+    background: -ms-linear-gradient(-45deg, #45cd72 0%,#45cd72 49%,#ffffff 50%,#ffffff 100%);
+    background: linear-gradient(125deg, #45cd72 0%,#45cd72 49%,#ffffff 50%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45cd72', endColorstr='#ffffff',GradientType=1 );
+}
+
+/*Color del price range del buscador*/
+
+.radius_value,
+#amount_sh
+#amount_wd,
+#amount{
+    border: 0;
+    color: #b881fc!important;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 10px;
+    font-size: 14px;
+}
+
+#amount_wd{
+    height: 20px;
+    display: inline-block;
+    margin-bottom: 9px;
+    
+}
+
+#amount_mobile{   
+    color: #b881fc!important;
+}
+
+/* Botón generate invoce */
+
+.action1_booking,
+.generate_invoice_show{
+    cursor: pointer;
+    background: #b881fc;
+    cursor: pointer;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.action1_booking:hover,
+.generate_invoice_show:hover{
+    background-color: #c18eff;
+}
+
+#direct_confirmation,
+#invoice_proceed_pay,
+#invoice_submit_show{
+
+    float: left;
+    display: block;
+    cursor: pointer;
+    clear: both;
+}
+
+.cancel_user_booking_show,
+.cancel_own_booking_show,
+.delete_invoice_show,
+.delete_booking_show{
+    background: #fd2d4f;
+    color: #fff!important;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;   
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.cancel_user_booking_show:hover,
+.cancel_own_booking_show:hover,
+.delete_invoice_show:hover,
+.delete_booking_show:hover{
+    background-color: #F94C68;
+}
+
+
+/** Botones de my reservations y my bookings **/
+
+.tag-post-review,
+.tag-published-not-paid{
+    margin-right: 10px;    
+}
+
+.proceed-payment_full,
+#post_review,
+.proceed-payment,
+.tag-post-review,
+.tag-published-not-paid,
+.tag-paid{   
+    background-color: #4559cd;
+    padding: 5px 10px;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.proceed-payment_full,
+#post_review,
+.tag-published-not-paid,
+.tag-post-review,
+.proceed-payment{
+    cursor:pointer;
+}
+
+.tag-published-confirmed{
+    margin-right: 10px; 
+    background-color: #4559cd;
+    padding: 5px 10px;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.tag-published-details{
+    margin-right: 10px; 
+    background-color: #b881fc;
+    padding: 5px 10px;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.proceed-payment_full_show,
+.proceed-payment_show{ 
+    margin-right: 10px;  
+    background-color: #d67608;
+    padding: 5px 10px;
+    margin-top: 0px;
+    padding: 13px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+
+/*.radius_value,
+#amount_sh
+#amount_wd,
+#amount{
+    border: 0;
+    color: #4d5567!important;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 10px;
+    font-size: 14px;
+}*/
+
+/*#slider_price_sh,
+.adv_search_slider #slider_price,
+#slider_price_widget{
+    height: 6px;
+    margin: 10px 10px 6px 10px;
+    background-color: #ffffff!important;
+}
+*/
+/*
+#infocloser{
+    background-image: url('/css/css-images/closeicon.png');
+}
+
+#infoguest{
+    background-image: url('/css/css-images/icon_bath.png');
+}
+
+#inforoom{
+    float: right;
+    background-image: url('/css/css-images/icon_bed.png');
+
+}
+
+#infosize{
+    background-image: url('/css/css-images/icon-size.png');
+}
+
+*/
