@@ -76,7 +76,7 @@ if($user_id_picture == '' ){
 
 <div class="user_profile_div"> 
             
-        <div class=" row">  
+        <div class="row" id="profile_info">  
               
             <div class="col-md-12">
              
@@ -116,43 +116,42 @@ if($user_id_picture == '' ){
                 
                 ?>
    
-                <div class="user_dashboard_panel">
+                <div class="user_dashboard_panel" style="display: block;">
                     <h4 class="user_dashboard_panel_title"><?php esc_html_e('Your details','wprentals');?></h4>
                     
                     <div class="col-md-12" id="profile_message"></div>
                     
                     <div class="col-md-4">
                         <p>
-                            <label for="firstname"><?php esc_html_e('First Name','wprentals');?></label>
-                            <input type="text" id="firstname" class="form-control" value="<?php print $first_name;?>"  name="firstname">
+                            <label for="firstname"><?php esc_html_e('Nombres','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
+                            <input type="text" required="required" id="firstname" class="form-control" value="<?php print $first_name;?>" name="firstname">
                         </p>
 
                         <p>
-                            <label for="useremail"><?php esc_html_e('Email','wprentals');?></label>
+                            <label for="useremail"><?php esc_html_e('Email','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="useremail"  class="form-control" value="<?php print $user_email;?>"  name="useremail">
                         </p>
                         
                         <p>
-                            <label for="about_me"><?php esc_html_e('About Me (Maximum 240 characters)','wprentals');?></label>
+                            <label for="about_me"><?php esc_html_e('Acerca de mi (Maximo: 240 caracteres)','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <textarea type="text" id="about_me" class="form-control about_me_profile" name="about_me"/><?php print $about_me;?></textarea>
                         </p>
                            
-                       
                     </div>
                     
                     <div class="col-md-4">
 
                         <p>
-                            <label for="secondname"><?php esc_html_e('Last Name','wprentals');?></label>
+                            <label for="secondname"><?php esc_html_e('Last Name','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="secondname" class="form-control" value="<?php print $last_name;?>"  name="firstname">
                         </p>
                         <p>
-                            <label for="userphone"><?php esc_html_e('Phone','wprentals');?></label>
+                            <label for="userphone"><?php esc_html_e('Phone','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="userphone" class="form-control" value="<?php print $user_phone;?>"  name="userphone">
                         </p>
 
                          <p>
-                            <label for="group"><?php esc_html_e('Artist type','wprentals');?></label>
+                            <label for="group"><?php esc_html_e('Artist type','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                            <!--  <input type="text" id="group" class="form-control" value="<?php print $group;?>"  name="group"> -->
                             <select id="group" name="group" class="form-control">
                                 <option  <?php if($group == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( 'Group','wprentals-core'); ?> </option> 
@@ -195,7 +194,7 @@ if($user_id_picture == '' ){
                     <?php   wp_nonce_field( 'profile_ajax_nonce', 'security-profile' );   ?>
                 
                     <div class="col-md-4">
-                         <div  id="profile-div" class="feature-media-upload">
+                         <div  id="profile-div" class="feature-media-upload" style="margin: 0 auto;margin-top: 50px">
                             
                                <?php print '<img id="profile-image" src="'.$user_custom_picture.'" alt="user image" data-profileurl="'.$user_custom_picture.'" data-smallprofileurl="'.$image_id.'" >';?>
 
@@ -214,7 +213,7 @@ if($user_id_picture == '' ){
                        
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display: none;">
                           <?php
                         $user_verified = get_user_meta( $userID, 'user_id_verified', TRUE );
                         $user_id_class = ( $user_verified == 1 ) ? 'verified' : 'feature-media-upload';
@@ -222,18 +221,18 @@ if($user_id_picture == '' ){
                         
                         <div id="user-id" class="<?php print esc_attr($user_id_class);?>">
 
-                            <?php print '<img id="user-id-image" src="' . $user_id_picture . '" alt="user ID image" data-useridurl="' . $user_id_picture . '" data-useridimageid="' . $id_image_id . '" >';?>
+                            <?php // print '<img id="user-id-image" src="' . $user_id_picture . '" alt="user ID image" data-useridurl="' . $user_id_picture . '" data-useridimageid="' . $id_image_id . '" >';?>
                             <?php if ( ! $user_verified ) { ?>
                             <div id="user-id-upload-container-wrap">
                                 <div id="user-id-upload-container">
 
-                                    <button id="user-id-uploader" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button image_id_uppload "><?php esc_html_e('Upload an Id Scan','wprentals');?></button>
+                                   <!--  <button id="user-id-uploader" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button image_id_uppload "><?php esc_html_e('Riego laborales','wprentals'); ?></button>
                                     <div id="user-id-upload-imagelist">
                                         <ul id="user-id-ul-list" class="aaiu-upload-list"></ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
-                            <span class="upload_explain"><?php esc_html_e('* recommended size: minimum 550px ','wprentals');?></span>
+                            <!-- <span class="upload_explain"><?php esc_html_e('* recommended size: minimum 550px ','wprentals');?></span> -->
                             <?php } else { ?>
                                 <div class="verified-id"><?php esc_html_e('You have been verified','wprentals');?></div>
                             <?php } ?>
@@ -272,18 +271,18 @@ if($user_id_picture == '' ){
                         </p> -->
 
                         <p>
-                            <label for="i_speak"><?php esc_html_e('I speak','wprentals');?></label>
+                            <label for="i_speak"><?php esc_html_e('I speak','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="i_speak"  class="form-control" value="<?php print $i_speak;?>"  name="i_speak">
                         </p>
 
                        
                        <p>
-                            <label for="city"><?php esc_html_e('City','wprentals');?></label>
+                            <label for="city"><?php esc_html_e('City','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="city"  class="form-control" value="<?php print $city;?>"  name="city">
                         </p>
 
                         <p>
-                            <label for="nationality"><?php esc_html_e('Nationality','wprentals');?></label><?php
+                            <label for="nationality"><?php esc_html_e('Nationality','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label><?php
                             print wpestate_country_list(esc_html(get_post_meta($user_agent_id, 'nationality', true)), 'form-control', 'nationality');?>
                         </p>
 
@@ -294,18 +293,18 @@ if($user_id_picture == '' ){
 
 
                         <p>
-                            <label for="street"><?php esc_html_e('Street','wprentals');?></label>
+                            <label for="street"><?php esc_html_e('Street','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="street"  class="form-control" value="<?php print $street;?>"  name="street">
                         </p>
 
                         
                         <p>
-                            <label for="state"><?php esc_html_e('State','wprentals');?></label>
+                            <label for="state"><?php esc_html_e('State','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="state"  class="form-control" value="<?php print $state;?>"  name="state">
                         </p>
 
                         <p>
-                            <label for="birth_date"><?php esc_html_e('Birth Date','wprentals');?></label>
+                            <label for="birth_date"><?php esc_html_e('Birth Date','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="date" id="birth_date"  class="form-control" value="<?php print $birth_date;?>"  name="birth_date">
                         </p>
 
@@ -315,12 +314,12 @@ if($user_id_picture == '' ){
 
 
                          <p>
-                            <label for="postal_code"><?php esc_html_e('Postal Code','wprentals');?></label>
+                            <label for="postal_code"><?php esc_html_e('Postal Code','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="postal_code"  class="form-control" value="<?php print $postal_code;?>"  name="postal_code">
                         </p>
 
                          <p>
-                            <label for="country"><?php esc_html_e('Country','wprentals');?></label><?php
+                            <label for="country"><?php esc_html_e('Country','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label><?php
                             print wpestate_country_list(esc_html(get_post_meta($user_agent_id, 'country', true)),'form-control','country');?>
                         </p>
 
@@ -351,7 +350,7 @@ if($user_id_picture == '' ){
                  <div class="col-md-4">
 
                       <p>
-                        <label for="invoce"><?php esc_html_e('Invoce type','wprentals');?></label>
+                        <label for="invoce"><?php esc_html_e('Invoce type','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                        <!--  <input type="text" id="group" class="form-control" value="<?php print $group;?>"  name="group"> -->
                         <select id="invoce" name="invoce" class="form-control">
                             <option  <?php if($invoce == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( 'Freelance','wprentals-core'); ?> </option> 
@@ -362,7 +361,7 @@ if($user_id_picture == '' ){
                     </p>
 
                     <p>
-                        <label for="currency"><?php esc_html_e('Currency','wprentals');?></label>
+                        <label for="currency"><?php esc_html_e('Currency','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                          <select id="currency" name="currency" class="form-control">
                             <option  <?php if($currency == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( '€','wprentals-core'); ?> </option> 
                             <option  <?php if($currency == 2){ ?> selected="selected" <?php } ?> value="2"> <?php print esc_html__( '$','wprentals-core'); ?> </option>
@@ -371,12 +370,12 @@ if($user_id_picture == '' ){
                     </p>
 
                         <p>
-                            <label for="country_invoce"><?php esc_html_e('Country invoce','wprentals');?></label><?php
+                            <label for="country_invoce"><?php esc_html_e('Country invoce','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label><?php
                             print wpestate_country_list(esc_html(get_post_meta($user_agent_id, 'country_invoce', true)), 'form-control', 'country_invoce');?>
                         </p>
 
                         <p>
-                        <label for="ss_number"><?php esc_html_e('Social Security Number','wprentals');?></label>
+                        <label for="ss_number"><?php esc_html_e('Social Security Number','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="ss_number"  class="form-control" value="<?php print $ss_number;?>"  name="ss_number">
                         </p>
 
@@ -385,25 +384,25 @@ if($user_id_picture == '' ){
                      <div class="col-md-4">
 
                     <p>
-                        <label for="payment_info"><?php esc_html_e('Bank Account Number','wprentals');?></label>
+                        <label for="payment_info"><?php esc_html_e('Bank Account Number','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="payment_info"  class="form-control" value="<?php print $payment_info;?>"  name="payment_info">
                     </p>
 
                      <p>
-                        <label for="company_name"><?php esc_html_e('Company name','wprentals');?></label>
+                        <label for="company_name"><?php esc_html_e('Company name','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="company_name"  class="form-control" value="<?php print $company_name;?>"  name="company_name">
                     </p>
-
+<!-- 
                     <p>
-                        <label for="payment_by_hour"><?php esc_html_e( 'Payment by','wprentals-core'); ?></label>
+                        <label for="payment_by_hour"><?php esc_html_e( 'Payment by','wprentals-core'); ?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <select id="payment_by_hour" name="payment_by_hour" class="form-control">
                             <option  <?php if($payment_by_hour == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( 'Hour','wprentals-core'); ?> </option> 
                             <option  <?php if($payment_by_hour == 2){ ?> selected="selected" <?php } ?> value="2"> <?php print esc_html__( 'Day','wprentals-core'); ?> </option> 
                         </select>
-                    </p>
+                    </p> -->
 
                     <p>
-                        <label for="fiscal_name"><?php esc_html_e('Fiscal Name / Inscription Certificate','wprentals');?></label>
+                        <label for="fiscal_name"><?php esc_html_e('Nombre Fiscal / Certificado de inscripcion','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="fiscal_name"  class="form-control" value="<?php print $fiscal_name;?>"  name="fiscal_name">
                         </p>
 
@@ -412,16 +411,16 @@ if($user_id_picture == '' ){
                     <div class="col-md-4">
 
                     <p>
-                        <label for="paypal_payments_to"><?php esc_html_e('Email for receiving Paypal Payments','wprentals');?></label>
+                        <label for="paypal_payments_to"><?php esc_html_e('Email for receiving Paypal Payments','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="paypal_payments_to"  class="form-control" value="<?php print $paypal_payments_to;?>"  name="paypal_payments_to">
                     </p>
 
                     <p>
-                        <label for="cif"><?php esc_html_e('CIF/DNI','wprentals');?></label>
+                        <label for="cif"><?php esc_html_e('CIF/DNI','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="cif"  class="form-control" value="<?php print $cif;?>"  name="cif">
                     </p>
                     <p>
-                        <label for="visa_type"><?php esc_html_e( 'Visa Type','wprentals-core'); ?></label>
+                        <label for="visa_type"><?php esc_html_e( 'Visa Type','wprentals-core'); ?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <select id="visa_type" name="visa_type" class="form-control">
                             <option  <?php if($visa_type == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( 'Visa','wprentals-core'); ?> </option> 
                             <option  <?php if($visa_type == 2){ ?> selected="selected" <?php } ?> value="2"> <?php print esc_html__( 'MasterCard','wprentals-core'); ?> </option> 
@@ -433,18 +432,20 @@ if($user_id_picture == '' ){
 
 
                 <p class="fullp-button">  
-                    <button class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="update_profile"><?php esc_html_e('Update profile','wprentals');?></button>
+                    <button class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="update_profile"><?php esc_html_e('Guardar','wprentals');?></button>
                     <?php
                       $agent_id   =   get_user_meta($userID, 'user_agent_id', true);
                         if ( $agent_id!=0 && get_post_status($agent_id)=='publish'  ){
-                            print'<a href='.get_permalink($agent_id).' class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="view_profile">'.esc_html__('View public profile', 'wprentals').'</a>';
+                            print'<a href='.get_permalink($agent_id).' class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="view_profile">'.esc_html__('Ver perfil publico', 'wprentals').'</a>';
                         }
                     ?>
                               
                 </p>
            </div>
         </div>
-   
+    </div>
+
+    <div class="row">
         <div class="col-md-12">  
             <div class="user_dashboard_panel">
                 <h4 class="user_dashboard_panel_title"><?php esc_html_e('Change Password','wprentals');?></h4>
@@ -456,16 +457,16 @@ if($user_id_picture == '' ){
                 </div> 
 
                 <p  class="col-md-4">
-                    <label for="oldpass"><?php esc_html_e('Old Password','wprentals');?></label>
+                    <label for="oldpass"><?php esc_html_e('Old Password','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                     <input  id="oldpass" value=""  class="form-control" name="oldpass" type="password">
                 </p>
 
                 <p  class="col-md-4">
-                    <label for="newpass"><?php esc_html_e('New Password ','wprentals');?></label>
+                    <label for="newpass"><?php esc_html_e('New Password ','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                     <input  id="newpass" value="" class="form-control" name="newpass" type="password">
                 </p>
                 <p  class="col-md-4">
-                    <label for="renewpass"><?php esc_html_e('Confirm New Password','wprentals');?></label>
+                    <label for="renewpass"><?php esc_html_e('Confirm New Password','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                     <input id="renewpass" value=""  class="form-control" name="renewpass"type="password">
                 </p>
 

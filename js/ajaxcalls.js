@@ -26,6 +26,7 @@ console.log("Ajaxcalls child");
 
 function start_filtering_ajax_map(newpage,pan_ne_lat, pan_ne_long, pan_sw_lat,pan_sv_long,move_map) {
 
+
     is_fit_bounds_zoom=1;
     map_geo_first_load=1;
     
@@ -2398,10 +2399,52 @@ jQuery(document).ready(function ($) {
     });
 
     ///////////////////////////////////////////////////////////////////////////////////////////  
+    ////////  Calcular edad
+    ////////////////////////////////////////////////////////////////////////////////////////////   
+
+        function getAge(dateString) {
+            var today = new Date();
+            var birthDate = new Date(dateString);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////  
     ////////  update profile
     ////////////////////////////////////////////////////////////////////////////////////////////   
 
     $('#update_profile').click(function () {
+
+        var val=false;
+        $("small").remove();
+        $("#profile_info input, #profile_info textarea").map(function(){
+             $("#"+this.id).css("margin-bottom", "15px");
+            if ($(this).val()=="" && this.type!='file') {
+                val=true;
+                $("#"+this.id).css("margin-bottom", "0px");
+                $("#"+this.id).after("<small style='color:red'>Esta campo es obligatorio</small>")
+                if (this.id=="about_me") {
+                  $("#"+this.id).after("<br>");
+                }
+                
+            }
+        });
+
+        if (val){
+            alert("Debes completar todos los datos");
+            return false;
+        }
+
+
+        if (getAge($("#birth_date").val())<18 ) {
+            alert("Debes ser mayor de 18 años para poder tener un perfil publico");
+            return false;
+        }
 
         var useridimageid,useridurl,live_in,i_speak, group, invoce, usermobile, userpinterest, userlinkedin, usertwitter, userfacebook, profile_image_url, profile_image_url_small, firstname, secondname, useremail, userphone, userskype, usertitle, description, ajaxurl, securityprofile, upload_picture, useridurl, useridimageid;
         
@@ -2515,7 +2558,7 @@ jQuery(document).ready(function ($) {
                // $('#profile_message').empty().append('<div class="login-alert">' + data + '<div>');
 
                 if (data.register === true) {
-                    jQuery('#profile_message').empty().append('<div class="login-alert">' + data.message + '</div>'); 
+                    jQuery('#profile_message').empty().append('<div class="login-alert">' + data.message + ', ¡Ya puedes publicar tu primer show!</div>'); 
                 }else{
                     jQuery('#profile_message').empty().append('<div class="alert_err login-alert">' + data.message + '</div>'); 
                 }

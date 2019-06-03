@@ -29,7 +29,7 @@ global $submission_page_fields;
 
 
 <div class="col-md-12" id="new_post2">
-    <div class="user_dashboard_panel">
+    <div class="user_dashboard_panel" id='location_section'>
     <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Location - (Place where you want to act)','wprentals');?></h4>
     
     <?php //wpestate_show_mandatory_fields();?>
@@ -41,13 +41,13 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_postal_code"><?php esc_html_e('Show Travel Aviability','wprentals'); ?> </label>
+                   <label for="show_postal_code"><?php esc_html_e('Mostrar disponibilidad de viaje','wprentals'); ?> </label>
                 </p>
             </div>
 
             <div class="col-md-3"> 
                 <p>
-                  <label for="show_travel"><?php esc_html_e('Show Travel Aviability','wprentals');?></label>
+                  <label for="show_travel"><?php esc_html_e('Mostrar disponibilidad de viaje','wprentals');?></label>
                   <!--  <input type="text" id="group" class="form-control" value="<?php print $group;?>"  name="group"> -->
                   <select id="show_travel" name="show_travel" class="form-control">
                       <option  <?php if($show_travel == 1){ ?> selected="selected" <?php } ?> value="1"> <?php print esc_html__( 'Local','wprentals-core'); ?> </option> 
@@ -65,7 +65,7 @@ global $submission_page_fields;
 
             <div class="col-md-3"> 
                  <p>
-                        <label for="show_tax_city"><?php esc_html_e('Select the cities where your show will be available. Press "ctrl" to select multiple cities.','wprentals'); ?></label>
+                        <label for="show_tax_city"><?php esc_html_e('Selecciona las ciudades donde estará disponible tu espectáculo. Presiona "ctrl" para seleccionar varias ciudades.','wprentals'); ?></label>
                         <?php 
                             $args=array(
                                     'class'       => 'select-submit2',
@@ -94,13 +94,13 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_country"><?php esc_html_e('Show Country','wprentals'); ?></label>
+                   <label for="show_country"><?php esc_html_e('Mostrar pais','wprentals'); ?></label>
                 </p>
             </div>
 
             <div class="col-md-3"> 
                  <p>
-                    <label for="show_country"><?php esc_html_e('Show Country','wprentals');?></label>
+                    <label for="show_country"><?php esc_html_e('Mostrar pais','wprentals');?></label>
                     <?php print wpestate_country_list($show_country, 'form-control', 'show_country');?>
                 </p>
             </div>  
@@ -187,7 +187,7 @@ global $submission_page_fields;
 
             <div class="col-md-3"> 
                 <p>
-                   <label for="show_city"><?php esc_html_e('In case you can not find your city in the field "Show Choose Cities", please write your city and it will be added automatically to cities. You can add more than one adding ", " between the citites. Example: "Valencia, Madrid"','wprentals'); ?> </label>
+                   <label for="show_city"><?php esc_html_e('En caso de que no pueda encontrar su ciudad en el campo "Mostrar ciudades elegidas", escriba su ciudad sin comillas y se agregará automáticamente a las ciudades. Puede agregar más de uno agregando "," entre las citas. Ejemplo: "Valencia, Madrid"','wprentals'); ?> </label>
                    <input type="text" id="show_city" class="form-control" value="<?php print $show_city; ?>" size="20" name="show_city" />
                 </p>
             </div>

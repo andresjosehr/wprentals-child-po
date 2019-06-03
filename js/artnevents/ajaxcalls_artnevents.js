@@ -303,6 +303,29 @@ jQuery(document).ready(function ($) {
     //edit show description
     ////////////////////////////////////////////////////////////////////////////
     $('#edit_show_description').click(function () {
+
+        var val=false;
+        $("small").remove();
+        $("#description_section input, #description_section textarea").map(function(){
+             $("#"+this.id).css("margin-bottom", "15px");
+            if ($(this).val()=="" && this.type!='file') {
+                val=true;
+                $("#"+this.id).css("margin-bottom", "0px");
+                $("#"+this.id).after("<small style='color:red'>Esta campo es obligatorio</small>")
+                if (this.id=="about_me") {
+                  $("#"+this.id).after("<br>");
+                }
+                
+            }
+        });
+
+        if (val){
+            alert("Debes completar todos los datos.");
+            setTimeout(function(){ window.preventDefault(); window.stopImmediatePropagation();}, 1000);
+            return false;
+        }
+
+        
         var ajaxurl, title, category, action_category, guests, city, country, area,listing_edit,prop_desc,property_admin_area,instant_booking;
         	
         var show_description, show_style, show_url, show_more_info, show_artistic_discipline;
@@ -403,6 +426,28 @@ jQuery(document).ready(function ($) {
     //edit show price
     ////////////////////////////////////////////////////////////////////////////
     $('#edit_show_price').click(function () {
+
+        var val=false;
+        $("small").remove();
+        $("#price_section input, #price_section textarea").map(function(){
+             $("#"+this.id).css("margin-bottom", "15px");
+            if ($(this).val()=="" && this.type!='file') {
+                val=true;
+                $("#"+this.id).css("margin-bottom", "0px");
+                $("#"+this.id).after("<small style='color:red'>Esta campo es obligatorio</small>")
+                if (this.id=="about_me") {
+                  $("#"+this.id).after("<br>");
+                }
+                
+            }
+        });
+
+        if (val){
+            alert("Debes completar todos los datos");
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
 
         var ajaxurl, title, category, action_category, guests, city, country, area,listing_edit,prop_desc,property_admin_area,instant_booking;
         	
@@ -708,6 +753,29 @@ jQuery(document).ready(function ($) {
     //edit property images
     ////////////////////////////////////////////////////////////////////////////  
     $('#edit_show_image').click(function () {
+
+        var val=false;
+        $("small").remove();
+        $("#show_video").map(function(){
+             $("#"+this.id).css("margin-bottom", "15px");
+            if ($(this).val()=="") {
+                val=true;
+                $("#"+this.id).css("margin-bottom", "0px");
+                $("#"+this.id).after("<small style='color:red'>Esta campo es obligatorio</small>")
+                if (this.id=="about_me") {
+                  $("#"+this.id).after("<br>");
+                }
+                
+            }
+        });
+
+        if (val){
+            alert("Debes completar todos los datos");
+            return false;
+        }
+
+
+
         var ajaxurl, video_type, video_id, attachid, attachthumb, listing_edit, show_video;
 
         show_video    =  jQuery('#show_video').val();
@@ -758,6 +826,31 @@ jQuery(document).ready(function ($) {
     //edit show location
     ////////////////////////////////////////////////////////////////////////////
     $('#edit_show_location').click(function () {
+
+        var val=false;
+        $("small").remove();
+        $("#location_section input, #location_section textarea").map(function(){
+             $("#"+this.id).css("margin-bottom", "15px");
+            if ($(this).val()=="" && this.type!='file' && this.id!="show_city") {
+                val=true;
+                $("#"+this.id).css("margin-bottom", "0px");
+                $("#"+this.id).after("<small style='color:red'>Esta campo es obligatorio</small>")
+                if (this.id=="about_me") {
+                  $("#"+this.id).after("<br>");
+                }
+                
+            }
+        });
+
+        if (val){
+            alert("Debes completar todos los datos");
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
+
+
+
         var ajaxurl, listing_edit;
 
         var show_place, show_address, show_city, show_state, show_postal_code, show_country, show_travel;
@@ -1262,4 +1355,29 @@ jQuery(document).ready(function ($) {
     });
 
 
-}); // end jquery
+}); 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/// Evitamos la redireccion de los menus del menu de navegacion superior en la ruta /edit-listing
+////////////////////////////////////////////////////////////////////////////////////////////
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+if (getQueryVariable("action")!="members") {}
+
+
+// $(document).on('click', '.user_dashboard_panel_guide a, .property_edit_menu a', function(e){
+//      e.preventDefault();
+//      e.stopImmediatePropagation();
+//      return false;
+// });// end jquery

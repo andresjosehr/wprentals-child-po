@@ -31,7 +31,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
     <div class="col-md-12" id="profile_message"></div>
    <!--  <div class="row">     -->
-        <div class="col-md-12">
+        <div class="col-md-12" id='price_section'>
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
@@ -46,11 +46,11 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
                 </p>
             </div>
 
-            <div class="col-md-3 dashboard_chapter_label"> 
+<!--             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
                    <label for="show_duration"><?php esc_html_e('Show Duration','wprentals'); ?></label>
                 </p>
-            </div>
+            </div> -->
 
             <div class="col-md-3"> 
                 <p>
@@ -73,7 +73,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
     <div class="col-md-12" style="display: inline-block;"> 
         <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="edit_show_price" value="<?php esc_html_e('Save', 'wprentals') ?>" />
 
-        <a href="<?php print $edit_link_members;?>" class="next_submit_page"><?php esc_html_e('Go to Members settings.','wprentals');?></a>
+        <a href="<?php print $edit_link_members;?>" class="next_submit_page"><?php esc_html_e('Ir a configuracion de miembros','wprentals');?></a>
     </div>
 
 </div>

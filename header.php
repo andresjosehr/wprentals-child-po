@@ -4,6 +4,10 @@
         <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
        
         <?php
 

@@ -203,8 +203,8 @@ if($user_id_picture == '' ){
                     </div>
                     <?php   wp_nonce_field( 'profile_ajax_nonce', 'security-profile' );   ?>
                 
-                    <div class="col-md-4">
-                         <div  id="profile-div" class="feature-media-upload">
+                    <div class="col-md-4" style="text-align: center;">
+                         <div  id="profile-div" class="feature-media-upload" style="max-width: 100%">
                             
                                <!-- <?php print '<img id="profile-image" src="'.$user_custom_picture.'" alt="user image" data-profileurl="'.$user_custom_picture.'" data-smallprofileurl="'.$image_id.'" >';?> -->
 
@@ -224,7 +224,7 @@ if($user_id_picture == '' ){
                     </div>
 
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="text-align: center;">
                           <?php
                         $user_verified = get_user_meta( $userID, 'user_id_verified', TRUE );
                         $user_id_class = ( $user_verified == 1 ) ? 'verified' : 'feature-media-upload';
@@ -237,7 +237,7 @@ if($user_id_picture == '' ){
                             <div id="user-id-upload-container-wrap">
                                 <div id="user-id-upload-container">
 
-                                    <button id="user-id-uploader" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button image_id_uppload "><?php esc_html_e('Upload an Id Scan','wprentals');?></button>
+                                    <button id="user-id-uploader" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button image_id_uppload "><?php esc_html_e('Subir PDF de riesgos laborales','wprentals');?></button>
                                     <div id="user-id-upload-imagelist">
                                         <ul id="user-id-ul-list" class="aaiu-upload-list"></ul>
                                     </div>

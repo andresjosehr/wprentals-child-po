@@ -41,7 +41,7 @@ global $submission_page_fields;
         ?>
     
         <?php } else{ ?>
-            <div class="price_explaning"> <?php   esc_html_e('*Click to select the period you wish to mark as booked for visitors.','wprentals');?></div>
+            <div class="price_explaning" style="margin-bottom: 57px;"> <?php   esc_html_e('* Haga click para seleccionar el período de días en el que su espectáculo no estará disponible para alquilar.','wprentals');?></div>
             <div class="col-md-12" id="profile_message"></div>
   
             <div class="booking-calendar-wrapper-in-wrapper booking-calendar-set">
@@ -74,7 +74,7 @@ global $submission_page_fields;
         <h4 class="user_dashboard_panel_title"><?php esc_html_e('Import/Export iCalendar feeds','wprentals'); ?> </h4>
 
         <div class="export_ical">
-        <strong> <?php esc_html_e('This is the listing iCalendar feed to export','wprentals'); ?> </strong>
+        <strong> <?php esc_html_e('Este es el feed de iCalendar para exportar.','wprentals'); ?> </strong>
 
         <?php 
         $unique_code_ical = get_post_meta($edit_id, 'unique_code_ica',true  );
@@ -116,7 +116,7 @@ global $submission_page_fields;
                     }
 
                 }else{
-                    esc_html_e('There are no calendar feeds','wprentals');
+                    esc_html_e('No hay fuentes de calendario','wprentals');
                 }
 
                 ?>
@@ -124,9 +124,9 @@ global $submission_page_fields;
 
              <div class="icalfeed">
                 <label for="property_icalendar_import"><?php esc_html_e('iCalendar import feeds (feed will be read every 3 hours and when you hit save)','wprentals');?></label>
-                <input type="text" class="form-control property_icalendar_import_name_new" size="40" width="200"  id="property_icalendar_import_name_new" name="property_icalendar_import_name_new" value="" placeholder=" <?php esc_html_e('feed name','wprentals');?> ">
-                <input type="text"  class="form-control property_icalendar_import_feed_new" size="40" width="200" id="property_icalendar_import_feed_new" name="property_icalendar_import_feed_new" value="" placeholder=" <?php esc_html_e('feed url','wprentals');?>">
-                <span id="add_extra_feed"><?php esc_html_e('Add new feed','wprentals');?></span>
+                <input type="text" class="form-control property_icalendar_import_name_new" size="40" width="200"  id="property_icalendar_import_name_new" name="property_icalendar_import_name_new" value="" placeholder=" <?php esc_html_e('Nombre de la fuenta','wprentals');?> ">
+                <input type="text"  class="form-control property_icalendar_import_feed_new" size="40" width="200" id="property_icalendar_import_feed_new" name="property_icalendar_import_feed_new" value="" placeholder=" <?php esc_html_e('url de la fuenta','wprentals');?>">
+                <span id="add_extra_feed"><?php esc_html_e('Añadir nueva fuente','wprentals');?></span>
 
             </div>
 

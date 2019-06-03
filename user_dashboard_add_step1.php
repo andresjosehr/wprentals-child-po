@@ -137,18 +137,6 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] ) {
             $errors[]=esc_html__( 'Please submit a title for your show.','wprentals');
 
         }
-
-        if(isset( $_POST['show_artistic_discipline'])){
-
-             $show_artistic_discipline_array      =   wp_kses( $_POST['show_artistic_discipline'] ,$allowed_html); 
-            
-        }else{
-
-            $has_errors=true;
-            $errors[]=esc_html__( 'Please select an artist discipline for your show.','wprentals');
-
-        }
-        
         
         $post_id                        =   '';
         $errors                         =   array();

@@ -25,7 +25,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
 <div class="col-md-12" id="new_post2">
     <div class="user_dashboard_panel">
-    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Members','wprentals');?></h4>
+    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Miembros','wprentals');?></h4>
     
     <?php //wpestate_show_mandatory_fields();?>
 
@@ -40,7 +40,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
                     ?>
                     <div class="col-md-12 dashboard_chapter_label"> 
                         <p>
-                        <label for="show_number_members"><?php esc_html_e('You are an individual artist. If you want to add some artist to your show, change your artist type to group in "My profile" .','wprentals'); ?> </label>
+                        <label for="show_number_members"><?php esc_html_e('Eres un artista individual. Si desea agregar algún artista a su programa, cambie su tipo de artista para agruparlo en "Mi perfil".','wprentals'); ?> </label>
                         </p>
                     </div>
 
@@ -136,7 +136,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
             <?php }
                 else{
                     ?>
-                    <label for="show_number_members"><?php esc_html_e('You can add an external artist to your show... if not you can pass to the next step.','wprentals'); ?> </label>
+                    <label for="show_number_members"><?php esc_html_e('Puedes agregar un artista externo a tu show ... si no, puedes pasar al siguiente paso.','wprentals'); ?> </label>
             <?php
                 }
             ?> 
@@ -146,7 +146,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="add_member"><?php esc_html_e('Add Artist to Show','wprentals'); ?></label>
+                   <label for="add_member"><?php esc_html_e('Añadir artista para mostrar','wprentals'); ?></label>
                 </p>
             </div>
 
@@ -184,15 +184,15 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
     <input type="hidden" name="" id="listing_edit" value="<?php print $edit_id;?>">
 
     <div class="col-md-12" style="display: inline-block;"> 
-        <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button vc_button" id="add_show_member" value="<?php esc_html_e('Add Artist to Show', 'wprentals') ?>" />
+        <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button vc_button" id="add_show_member" value="<?php esc_html_e('Añadir artista', 'wprentals') ?>" />
     </div>
     
     <div class="col-md-12" style="display: inline-block;"> 
-        <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="save_show_member" value="<?php esc_html_e('Save and go to Images', 'wprentals') ?>" />
+        <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="save_show_member" value="<?php esc_html_e('Guardar', 'wprentals') ?>" />
 
     <?php } ?>
 
-        <a href="<?php print $edit_link_images;?>" class="next_submit_page"><?php esc_html_e('Go to Images settings.','wprentals');?></a>
+        <a href="<?php print $edit_link_images;?>" class="next_submit_page"><?php esc_html_e('Ir a la configuracion multimedia','wprentals');?></a>
     </div>
 
     

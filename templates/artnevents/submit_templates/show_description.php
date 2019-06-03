@@ -39,7 +39,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
 
     <div class="col-md-12" id="profile_message"></div>
-    <div class="row">    
+    <div class="row" id='description_section'>    
         <div class="col-md-12">
 
             <div class="col-md-3 dashboard_chapter_label"> 
@@ -51,7 +51,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
             <div class="col-md-6"> 
                 <p>
                    <label for="title"><?php esc_html_e('Show Name','wprentals'); ?> </label>
-                   <input type="text" id="title" class="form-control" value="<?php print $submit_title; ?>" size="20" name="title" />
+                   <input type="text" id="title" class="form-control" value="<?php print $submit_title; ?>" size="20" name="title" required/>
                 </p>
             </div>    
 
@@ -68,8 +68,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
             <div class="col-md-6"> 
                 <p>
                    <label for="show_description"><?php esc_html_e('Description (Maximum 240 characteres)','wprentals'); ?> </label>
-                   <textarea type="text" id="show_description" class="form-control" value="" size="20" name="show_description"><?php print $submit_description; ?>
-                   </textarea>
+                   <textarea type="text" id="show_description" class="form-control" value="" size="20" name="show_description" required ><?php print $submit_description; ?></textarea>
                 </p>
             </div>    
 
@@ -86,20 +85,20 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
             <div class="col-md-3"> 
                 <p>
                    <label for="show_style"><?php esc_html_e('Show Style','wprentals'); ?> </label>
-                   <input type="text" id="show_style" class="form-control" value="<?php print $show_style; ?>" size="20" name="show_style" />
+                   <input type="text" id="show_style" class="form-control" value="<?php print $show_style; ?>" size="20" name="show_style" required />
                 </p>
             </div>    
 
-            <div class="col-md-3 dashboard_chapter_label"> 
+        <!--     <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
                    <label for="show_url"><?php esc_html_e('Show Web Page','wprentals'); ?> </label>
                 </p>
             </div>
-
+ -->
             <div class="col-md-3"> 
                 <p>
                    <label for="show_url"><?php esc_html_e('Show Web Page','wprentals'); ?> </label>
-                   <input type="text" id="show_url" class="form-control" value="<?php print $show_url; ?>" size="20" name="show_url" />
+                   <input type="text" id="show_url" class="form-control" value="<?php print $show_url; ?>" size="20" name="show_url" required />
                 </p>
             </div>    
 
@@ -152,7 +151,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
                             esc_html_e('Category and Listed In/Room Type','wprentals');
                         }
                         if($item_rental_type==1){
-                            esc_html_e('Artistic Discipline Show','wprentals');
+                            esc_html_e('Mas informacion','wprentals');
                         }
                     ?>
                     </label>
@@ -160,7 +159,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
             </div>
 
             <?php  if(   is_array($submission_page_fields) && in_array('prop_category_submit', $submission_page_fields)) { ?>
-                <div class="col-md-3"> 
+                 <div class="col-md-3"> 
                     <p>
                         <label for="show_artistic_discipline"><?php print $category_main_label; ?></label>
                         <?php 
@@ -183,19 +182,19 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
                             wp_dropdown_categories( $args ); 
                         ?>
                     </p>
-                </div>
+                </div> 
             <?php } ?>
 
-            <div class="col-md-3 dashboard_chapter_label"> 
+            <!-- <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
                    <label for="show_more_info"><?php esc_html_e('Show More Information','wprentals'); ?> </label>
                 </p>
-            </div>
+            </div> -->
 
             <div class="col-md-3"> 
                 <p>
                    <label for="show_more_info"><?php esc_html_e('Show More Information','wprentals'); ?> </label>
-                   <input type="text" id="show_more_info" class="form-control" value="<?php print $show_more_info; ?>" size="20" name="show_more_info" />
+                   <input type="text" id="show_more_info" class="form-control" value="<?php print $show_more_info; ?>" size="20" name="show_more_info" required />
                 </p>
             </div> 
 

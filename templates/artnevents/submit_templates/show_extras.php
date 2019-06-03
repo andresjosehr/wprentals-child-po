@@ -31,8 +31,8 @@ global $submission_page_fields;
 
 <div class="col-md-12" id="new_post2">
     <div class="user_dashboard_panel">
-    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Extras','wprentals');?></h4>
-    
+    <h4 class="user_dashboard_panel_title" style="margin-bottom: 0px"><?php  esc_html_e('Extras','wprentals');?></h4>
+    <p class="pl-3" style="margin-left: 18px;margin-top: 42px;margin-bottom: 47px;"><b>Indica los extras que incluye tu espectáculo</b></p>
     <?php //wpestate_show_mandatory_fields();?>
 
 

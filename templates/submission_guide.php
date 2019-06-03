@@ -95,11 +95,11 @@ if ( isset($_GET['listing_edit'] ) && is_numeric($_GET['listing_edit'])) {
 
 ?>
 
-<div class=" user_dashboard_panel_guide">
+<div class=" user_dashboard_panel_guide" style="width: 100%;text-align: center;">
     <a href="<?php print $edit_link_desc; ?>"        class="<?php print $activeedit; ?>"><?php esc_html_e('Description','wprentals');?></a>
     <a href="<?php print $edit_link_price; ?>"       class="<?php print $activeprice; ?>"><?php esc_html_e('Price','wprentals');?></a>
-     <a href="<?php print $edit_link_members; ?>"    class="<?php print $activemembers; ?>"><?php esc_html_e('Members','wprentals');?></a>
-    <a href="<?php print $edit_link_images; ?>"      class="<?php print $activeimages; ?>"><?php esc_html_e('Images','wprentals');?></a>
+     <a href="<?php print $edit_link_members; ?>"    class="<?php print $activemembers; ?>"><?php esc_html_e('Miembros','wprentals');?></a>
+    <a href="<?php print $edit_link_images; ?>"      class="<?php print $activeimages; ?>"><?php esc_html_e('Multimedia','wprentals');?></a>
      <a href="<?php print $edit_link_location; ?>"     class="<?php print $activelocation; ?>"><?php esc_html_e('Location','wprentals');?></a>
      <a href="<?php print $edit_link_extras; ?>"     class="<?php print $activeextras; ?>"><?php esc_html_e('Extras','wprentals');?></a>
     <!-- <a href="<?php print $edit_link_details; ?>"     class="<?php print $activedetails; ?>"><?php esc_html_e('Details','wprentals');?></a> -->

@@ -72,19 +72,54 @@ $post_thumbnail_id = $thumbid = get_post_thumbnail_id( $edit_id );
 
 
 <div class="col-md-12" id="new_post2">
-    <div class="user_dashboard_panel">
-    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Show Media','wprentals');?></h4>
+    <div class="user_dashboard_panel" id="multimedia">
+    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Multimedia','wprentals');?></h4>
   
     <?php //wpestate_show_mandatory_fields();?>
 
 
     <div class="col-md-12" id="profile_message"></div>
+
+
+
+
+        <?php 
+   // if(is_array($submission_page_fields) && in_array('embed_video_type', $submission_page_fields)) {
+    ?>
+
+        <div class="col-md-6">
+        <p>
+                <label for="new_video_from" class="dashboard_chapter_label"><?php esc_html_e('New Video from (Vimeo or Youtube)','wprentals');?></label>
+                <div>
+                <input type="text" name="show_video" id="show_video" value="" class="form-control" size="90%" /></br>
+                </div>
+            </p>
+        </div>
+
+
+        <div class="col-md-6">
+            <?php if($show_video){ ?>
+            <p>
+                <label for="video_form" class="dashboard_chapter_label"><?php esc_html_e('Video from','wprentals');?></label>
+                <!-- <select id="embed_video_type" name="embed_video_type" class="select-submit2">
+                    <?php print $show_video;?>
+                </select> -->
+                <div>
+                    <?php print $show_video; ?>
+                </div>
+            </p>
+            <?php } ?>
+        </div>
+
+    <?php //} ?>
+
+
      
     <?php 
    // if(is_array($submission_page_fields) && in_array('attachid', $submission_page_fields)) {
     ?>
 
-        <div class="col-md-12">
+        <div class="col-md-12" style="margin-top: 50px">
             <div id="upload-container">                 
                 <div id="aaiu-upload-container">                 
                     <div id="aaiu-upload-imagelist">
@@ -111,36 +146,7 @@ $post_thumbnail_id = $thumbid = get_post_thumbnail_id( $edit_id );
         </div>
     <?php // } ?>
     
-      
-    <?php 
-   // if(is_array($submission_page_fields) && in_array('embed_video_type', $submission_page_fields)) {
-    ?>
-
-
-        <div class="col-md-6">
-            <?php if($show_video){ ?>
-            <p>
-                <label for="video_form" class="dashboard_chapter_label"><?php esc_html_e('Video from','wprentals');?></label>
-                <!-- <select id="embed_video_type" name="embed_video_type" class="select-submit2">
-                    <?php print $show_video;?>
-                </select> -->
-                <div>
-                    <?php print $show_video; ?>
-                </div>
-            </p>
-            <?php } ?>
-        </div>
-
-        <div class="col-md-6">
-        <p>
-                <label for="new_video_from" class="dashboard_chapter_label"><?php esc_html_e('New Video from (Vimeo or Youtube)','wprentals');?></label>
-                <div>
-                <input type="text" name="show_video" id="show_video" value="" size="90%" /></br>
-                </div>
-            </p>
-        </div>
-
-    <?php //} ?>
+    
     
     <!-- <?php 
     if(is_array($submission_page_fields) && in_array('embed_video_id', $submission_page_fields)) {

@@ -13,6 +13,7 @@ $action_select_list         =   wpestate_get_action_select_list($args);
 
 $show_discipline_select_list     =   wpestate_get_show_discipline_select_list($args);
 
+
 //error_log("discipline_select_list advanced_search: ".print_r($show_discipline_select_list, TRUE));
 
 $show_city_select_list           =   wpestate_get_show_city_select_list($args);

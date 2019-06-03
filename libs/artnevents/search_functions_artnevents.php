@@ -749,7 +749,8 @@ if(!function_exists('wprentals_location_custom_dropwdown')):
                     $return_string.= 'all';
                 }
             $return_string.='">';
-                
+            
+            $label="Lugar";
             if(isset($_GET['search_location']) && $_GET['search_location']!=''&& $_GET['search_location']!='0' ){
                 $return_string.= esc_attr($search_location['search_location']);
             }else{
@@ -840,7 +841,7 @@ if( !function_exists('wpestate_get_action_select_list_4all_show') ):
         $categ_select_list  =   get_transient('wpestate_get_select_list_'.$taxonomy);
         if($categ_select_list===false){
           
-                     
+            $args["hide_empty"]=false ;
             $categories         =   get_terms($taxonomy,$args);
             
             if($taxonomy=='property_category'){

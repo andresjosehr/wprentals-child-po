@@ -2705,7 +2705,8 @@ if( !function_exists('wpestate_ajax_show_login_form') ):
                       <div class="modal-header"> 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h2 class="modal-title_big" >'.$mesaj_big.'</h4>
-                        <h4 class="modal-title" id="myModalLabel">'.$sub_mesaj.'</h4>
+                        <h4 class="modal-title" id="myModalLabel" style="margin-bottom: 0px !important;">'.$sub_mesaj.'</h4>
+                        <h4 style="padding-bottom: 30px; color:white !important">Regístrate como artista o caza talentos</h4>
                       </div>
 
                        <div class="modal-body">
