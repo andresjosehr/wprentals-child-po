@@ -378,7 +378,7 @@ global $schema_flag;
                         <?php print $show_number_members;
 
                             if($show_number_members == 1) print " member";
-                            else print " members";
+                            else print " Miembros";
 
                         ?>
                     </div>
@@ -388,7 +388,7 @@ global $schema_flag;
                         <?php print $show_duration;
 
                             if($show_number_members == 1) print " hour";
-                            else print " hours";
+                            else print " Horas";
                         ?>
                     </div>
                     <div class="category_tagline">

@@ -42,7 +42,7 @@ global $submission_page_fields;
 
           <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_clothes"><?php esc_html_e('Show Clothes','wprentals'); ?> </label>
+                   <label for="show_clothes"><?php esc_html_e('Mostrar ropa','wprentals'); ?> </label>
                 </p>
             </div>
 
@@ -68,7 +68,7 @@ global $submission_page_fields;
 
             <div class="col-md-3"> 
                  <p>
-                        <label for="show_tax_instrumentos"><?php esc_html_e('Select show instruments. Press "ctrl" to select multiple cities.','wprentals'); ?></label>
+                        <label for="show_tax_instrumentos"><?php esc_html_e('Seleccione los instrumentos. Presiona "ctrl" para seleccionar varias ciudades.','wprentals'); ?></label>
                         <?php 
                             $args=array(
                                     'class'       => 'select-submit2',
@@ -97,7 +97,7 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_lighting"><?php esc_html_e('Show Lighting','wprentals'); ?> 
+                   <label for="show_lighting"><?php esc_html_e('Iluminación del espectáculo','wprentals'); ?> 
 
                    </label>
                 </p>
@@ -118,13 +118,13 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_selected_instruments"><?php esc_html_e('Selected Instruments','wprentals'); ?></label>
+                   <label for="show_selected_instruments"><?php esc_html_e('Instrumentos seleccionados','wprentals'); ?></label>
                 </p>
             </div>
 
             <div class="col-md-3"> 
                  <p>
-                    <label for="show_selected_instruments"><?php esc_html_e('Selected Instruments','wprentals');?></label>
+                    <label for="show_selected_instruments"><?php esc_html_e('Instrumentos seleccionados','wprentals');?></label>
                     <?php print get_the_term_list($edit_id, 'show_tax_instrumentos', '', ', ', '');?>
                 </p>
             </div>
@@ -179,7 +179,7 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_stereo"><?php esc_html_e('Show Stereo','wprentals'); ?> </label>
+                   <label for="show_stereo"><?php esc_html_e('Mostrar estereo','wprentals'); ?> </label>
                 </p>
             </div>
 
@@ -220,7 +220,7 @@ global $submission_page_fields;
     <div class="col-md-12" style="display: inline-block;"> 
         <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="edit_show_extra" value="<?php esc_html_e('Save', 'wprentals') ?>" />
 
-        <a href="<?php print $edit_link_calendar;?>" class="next_submit_page"><?php esc_html_e('Go to Extra settings.','wprentals');?></a>
+        <a href="<?php print $edit_link_calendar;?>" class="next_submit_page"><?php esc_html_e('Ir a confirguración de calendario.','wprentals');?></a>
     </div>
 
 </div>

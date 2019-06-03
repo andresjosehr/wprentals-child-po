@@ -57,7 +57,8 @@ $rental_type=wprentals_get_option('wp_estate_item_rental_type');
                     }
                     
                     if($content!=''){   
-                        print '<h4 class="panel-title-description">'.$property_description_text.'</h4>';
+                        // print '<h4 class="panel-title-description">'.$property_description_text.'</h4>';
+                        print '<h4 class="panel-title-description">Descripción</h4>';
                         print '<div itemprop="description" class="panel-body">'.$content.'</div>';       
                     }
                 ?>

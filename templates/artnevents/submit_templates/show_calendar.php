@@ -41,7 +41,7 @@ global $submission_page_fields;
         ?>
     
         <?php } else{ ?>
-            <div class="price_explaning" style="margin-bottom: 57px;"> <?php   esc_html_e('* Haga click para seleccionar el período de días en el que su espectáculo no estará disponible para alquilar.','wprentals');?></div>
+            <div class="price_explaning" style="margin-bottom: 57px;"> <?php   esc_html_e('* Haga doble click para seleccionar el período de un día en el que su espectáculo no estará disponible y haga click en dos fechas distintas para bloquear un período de días para alquilar','wprentals');?></div>
             <div class="col-md-12" id="profile_message"></div>
   
             <div class="booking-calendar-wrapper-in-wrapper booking-calendar-set">

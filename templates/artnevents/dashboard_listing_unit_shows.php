@@ -212,7 +212,7 @@ if( is_page_template( 'user_dashboard_favorite.php' ) ){
             </div>
 
             <div class="user_dashboard_listed">
-                 <?php esc_html_e('Artistic discipline ','wprentals');?>  
+                 <?php esc_html_e('Disciplina Artistica ','wprentals');?>  
                  <?php 
 
                     print $show_artistic_discipline;
@@ -220,17 +220,17 @@ if( is_page_template( 'user_dashboard_favorite.php' ) ){
             </div>
 
              <div class="user_dashboard_listed">
-                 <?php print esc_html__( 'Number of members','wprentals').': ';?>            
+                 <?php print esc_html__( 'Numero de miembros','wprentals').': ';?>            
                  <?php print get_post_meta($post_id, 'show_number_members', true);?>
                  <?php //print ', '.esc_html__( 'Area','wprentals').': '?>
                  <?php //print get_the_term_list($post_id, 'property_area', '', ', ', '');?>          
             </div>
 
             <div class="user_dashboard_listed">
-                 <?php print esc_html__( 'Show duration','wprentals').': ';?>            
+                 <?php print esc_html__( 'Duración del show','wprentals').': ';?>            
                  <?php print get_post_meta($post_id, 'show_duration', true);?>
 
-                 <?php print ' '.esc_html__( 'hours','wprentals'); ?>
+                 <?php print ' '.esc_html__( 'horas','wprentals'); ?>
                  <?php //print get_the_term_list($post_id, 'property_area', '', ', ', '');?>          
             </div>
 
@@ -252,10 +252,10 @@ if( is_page_template( 'user_dashboard_favorite.php' ) ){
          
              
                 <div class="info-container">
-                    <a  data-original-title="<?php esc_html_e('Edit Show','wprentals');?>"   class="dashboad-tooltip" href="<?php  print $edit_link;?>"><i class="fas fa-pencil-alt editprop"></i></a>
+                    <a  data-original-title="<?php esc_html_e('Editar Show','wprentals');?>"   class="dashboad-tooltip" href="<?php  print $edit_link;?>"><i class="fas fa-pencil-alt editprop"></i></a>
 
 
-                    <a  data-original-title="<?php esc_html_e('Delete Show','wprentals');?>" class="dashboad-tooltip" onclick="return confirm(' <?php echo esc_html__( 'Are you sure you wish to delete ','wprentals').get_the_title(); ?>?')" href="<?php print esc_url ( add_query_arg( 'delete_id', $post_id,esc_url($_SERVER['REQUEST_URI']) ) );?>"><i class="fas fa-times deleteprop"></i></a>  
+                    <a  data-original-title="<?php esc_html_e('Eliminar Show','wprentals');?>" class="dashboad-tooltip" onclick="return confirm(' <?php echo esc_html__( 'Are you sure you wish to delete ','wprentals').get_the_title(); ?>?')" href="<?php print esc_url ( add_query_arg( 'delete_id', $post_id,esc_url($_SERVER['REQUEST_URI']) ) );?>"><i class="fas fa-times deleteprop"></i></a>  
 
 
                     <?php

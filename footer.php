@@ -60,7 +60,8 @@ if( !is_search() && !is_category() && !is_tax() &&  !is_tag() &&  !is_archive() 
                 if (function_exists('icl_translate') ){
                     print $property_copy_text      =   icl_translate('wprentals','wp_estate_property_copyright_text', stripslashes ( esc_html( wprentals_get_option('wp_estate_copyright_message') ) ) );
                 }else{
-                    print stripslashes ( esc_html (wprentals_get_option('wp_estate_copyright_message') ) );
+                   // print stripslashes ( esc_html (wprentals_get_option('wp_estate_copyright_message') ) );
+                  ?>Copyright 2019 | ARTNEVENTS. Todos los derechos reservados<?php
                 }
                 ?>
             </span>

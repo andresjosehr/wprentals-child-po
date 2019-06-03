@@ -70,7 +70,7 @@ $options=wpestate_page_details($post->ID);
             endwhile;
             
         }else{
-            print '<h4 class="no_favorites">'.esc_html__( 'You don\'t have any favorite shows yet!','wprentals').'</h4>';
+            print '<h4 class="no_favorites">'.esc_html__( 'Aun no tienes shows favoritos','wprentals').'</h4>';
         }
         ?>    
         </div>          

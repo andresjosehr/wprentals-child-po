@@ -57,7 +57,7 @@ $schema_data=   'itemprop="itemListElement" itemscope itemtype="http://schema.or
             
             <div class="category_tagline">
                 <span class="span_widemeta"> <?php print get_the_date('M d, Y');?></span>  
-                <span class="span_widemeta"><?php esc_html_e('Category: ','wprentals');the_category(', '); ?></span> 
+                <span class="span_widemeta"><?php esc_html_e('Categoria: ','wprentals');the_category(', '); ?></span> 
                 <!-- <span class="span_widemeta span_comments"><i class="far fa-comment"></i> <?php //comments_number( '0','1','%');?></span>
                 -->
                 <span class="span_widemeta span_comments"><?php comments_number( '0','1','%');echo ' ';esc_html_e('Comments','wprentals');?></span>

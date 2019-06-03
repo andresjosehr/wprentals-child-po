@@ -64,7 +64,7 @@ get_template_part('templates/artnevents/show_header2');
             <div class="panel-body imagebody imagebody_new">
                 <div class="panel-wrapper" id="listing_images">
                          <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseImages"> <span class="panel-title-arrow"></span><?php
-                            esc_html_e('Images','wprentals');?>
+                            esc_html_e('Imagenes','wprentals');?>
                         </a>
                          <div id="collapseImages" class="panel-collapse collapse in">
                           <?php  
@@ -110,7 +110,7 @@ get_template_part('templates/artnevents/show_header2');
         <div class="panel-wrapper">
             <?php                                       
             if($property_details_text=='') {
-                print'<a class="panel-title" id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.esc_html__( 'Show Details', 'wprentals').'  </a>';
+                print'<a class="panel-title" id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.esc_html__( 'Detalles', 'wprentals').'  </a>';
             }else{
                 print'<a class="panel-title"  id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.$property_details_text.'  </a>';
             }

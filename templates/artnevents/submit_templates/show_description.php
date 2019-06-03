@@ -33,7 +33,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
 <div class="col-md-12" id="new_post2">
     <div class="user_dashboard_panel">
-    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Description','wprentals');?></h4>
+    <h4 class="user_dashboard_panel_title"><?php  esc_html_e('Descripción','wprentals');?></h4>
     
     <?php //wpestate_show_mandatory_fields();?>
 
@@ -171,6 +171,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
                                     'id'          => 'show_artistic_discipline_submit',
                                     'orderby'     => 'NAME',
                                     'order'       => 'ASC',
+                                    'exclude'       => '79',
                                     //'show_option_none'   => esc_html__( 'None','wprentals'),
                                     'taxonomy'    => 'show_tax_artistic_discipline',
                                     'hierarchical'=> true,

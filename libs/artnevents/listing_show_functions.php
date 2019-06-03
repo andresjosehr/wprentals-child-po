@@ -35,15 +35,15 @@ if( !function_exists('show_listing_details') ):
         }
 
         if ($show_style != ''){
-            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Style','wprentals').':</span> ' . $show_style . '</div>'; 
+            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Estilo','wprentals').':</span> ' . $show_style . '</div>'; 
         }  
 
         if ($show_duration != ''){
-            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Duration','wprentals').':</span> ' . $show_duration . ' '.esc_html__( 'hour','wprentals').'</div>'; 
+            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Duración','wprentals').':</span> ' . $show_duration . ' '.esc_html__( 'hour','wprentals').'</div>'; 
         }  
 
         if ($show_artistic_discipline != ''){
-            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Discipline Artistic','wprentals').':</span> ' . $show_artistic_discipline .'</div>'; 
+            $return_string.= '<div class="listing_detail list_detail_prop_rooms col-md-6"><span class="item_head">'.esc_html__( 'Disciplina Artistica','wprentals').':</span> ' . $show_artistic_discipline .'</div>'; 
         }
 
         if ($show_number_members != ''){
@@ -273,7 +273,7 @@ if( !function_exists('show_listing_address') ):
         $return_string='';
 
         if ($show_place != ''){
-            $return_string.='<div class="listing_detail list_detail_prop_address col-md-6"><span class="item_head">'.esc_html__( 'Place','wprentals').':</span> ' . $show_place . '</div>'; 
+            $return_string.='<div class="listing_detail list_detail_prop_address col-md-6"><span class="item_head">'.esc_html__( 'Lugar','wprentals').':</span> ' . $show_place . '</div>'; 
         }
 
         if ($show_country != ''){
