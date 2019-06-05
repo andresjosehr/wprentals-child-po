@@ -168,18 +168,18 @@ if($user_custom_picture==''){
     
     <div class="user_dashboard_links">
         <?php if( $dash_profile!=$home_url && $dash_profile!="" ){ ?>
-            <a href="<?php print $dash_profile;?>"  class="<?php print $activeprofile; ?>"><i class="fas fa-user"></i> <?php esc_html_e('My Profile','wprentals');?></a>
+            <a href="<?php print $dash_profile;?>"  class="<?php print $activeprofile; ?>"><i class="fas fa-user"></i> <?php esc_html_e('Mi perfil','wprentals');?></a>
         <?php } ?>
         <?php if( $dash_pack!=$home_url && $dash_pack!="" && $paid_submission_status=='membership' && wpestate_check_user_level() ){ ?>
-            <a href="<?php print $dash_pack;?>" class="<?php print $activemypack; ?>"><i class="fas fa-tasks"></i> <?php esc_html_e('My Subscription','wprentals');?></a>
+            <a href="<?php print $dash_pack;?>" class="<?php print $activemypack; ?>"><i class="fas fa-tasks"></i> <?php esc_html_e('Mis suscripciones','wprentals');?></a>
         <?php } ?>
         <?php if( $dash_link!=$home_url  && $dash_link!=""   && wpestate_check_user_level()){ ?>
-            <a href="<?php print $dash_link;?>"     class="<?php print $activedash; ?>"> <i class="fas fa-map-marker"></i> <?php esc_html_e('My Shows','wprentals');?></a>
+            <a href="<?php print $dash_link;?>"     class="<?php print $activedash; ?>"> <i class="fas fa-map-marker"></i> <?php esc_html_e('Mis Shows','wprentals');?></a>
         <?php } ?>
         <?php if( $add_link!=$home_url  && $add_link!=""  && wpestate_check_user_level()){ 
               $edit_class="";?>
             
-            <a href="<?php print $add_link;?>"      class="<?php print $activeadd; print $edit_class; ?>"> <i class="fas fa-plus"></i><?php esc_html_e('Add New Show','wprentals');?></a>  
+            <a href="<?php print $add_link;?>"      class="<?php print $activeadd; print $edit_class; ?>"> <i class="fas fa-plus"></i><?php esc_html_e('Añadir show','wprentals');?></a>  
            
            
             <?php

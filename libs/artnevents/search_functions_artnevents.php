@@ -841,7 +841,8 @@ if( !function_exists('wpestate_get_action_select_list_4all_show') ):
         $categ_select_list  =   get_transient('wpestate_get_select_list_'.$taxonomy);
         if($categ_select_list===false){
           
-            $args["hide_empty"]=false ;
+            $args["hide_empty"]=false;
+            $args["exclude"]="79";
             $categories         =   get_terms($taxonomy,$args);
             
             if($taxonomy=='property_category'){

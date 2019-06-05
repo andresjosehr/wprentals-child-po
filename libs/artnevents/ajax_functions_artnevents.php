@@ -817,7 +817,7 @@ function artnevents_ajax_update_listing_location(){
                 }else{
                   
                     $has_errors=true;
-                    $errors[]=esc_html__( 'Please write a travel aviability for your show.','wprentals');
+                    $errors[]=esc_html__( 'Por favor escriba una disponibilidad de viaje para su show.','wprentals');
                 }
 
                 //////////////////////////////////////// the updated 

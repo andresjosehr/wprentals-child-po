@@ -168,13 +168,13 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_place"><?php esc_html_e('Show Place','wprentals'); ?> </label>
+                   <label for="show_place"><?php esc_html_e('Precio fijo por kilometraje','wprentals'); ?> </label>
                 </p>
             </div>
 
             <div class="col-md-3"> 
                 <p>
-                   <label for="show_place"><?php esc_html_e('Show Place','wprentals'); ?> </label>
+                   <label for="show_place"><?php esc_html_e('Precio fijo por kilometraje','wprentals'); ?> </label>
                    <input type="text" id="show_place" class="form-control" value="<?php print $show_place; ?>" size="20" name="show_place" />
                 </p>
             </div>
@@ -206,7 +206,7 @@ global $submission_page_fields;
     <div class="col-md-12" style="display: inline-block;"> 
         <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button" id="edit_show_location" value="<?php esc_html_e('Save', 'wprentals') ?>" />
 
-        <a href="<?php print $edit_link_extras;?>" class="next_submit_page"><?php esc_html_e('Go to Extra settings.','wprentals');?></a>
+        <a href="<?php print $edit_link_extras;?>" class="next_submit_page"><?php esc_html_e('Ir la configuracion extra.','wprentals');?></a>
     </div>
 
 </div>

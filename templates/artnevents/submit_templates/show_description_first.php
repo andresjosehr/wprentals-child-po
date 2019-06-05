@@ -164,10 +164,8 @@ foreach ($Usuario as $key => $value) {
         
         <?php
         //En la varibale $submission_page_fields están los campos que se ponen en general. En este caso no hay nada. 
-        if(   is_array($submission_page_fields) && 
-            (    in_array('prop_category_submit', $submission_page_fields) || 
-                in_array('prop_action_category_submit', $submission_page_fields) )
-        ) { ?>
+        // if(is_array($submission_page_fields) && (in_array('prop_category_submit', $submission_page_fields) || in_array('prop_action_category_submit', $submission_page_fields))) { 
+        ?>
 
 
         <div class="col-md-12">
@@ -187,10 +185,10 @@ foreach ($Usuario as $key => $value) {
                 </p>
             </div>
 
-            <?php  if(   is_array($submission_page_fields) && in_array('prop_category_submit', $submission_page_fields)) { ?>
+            <?php // if(   is_array($submission_page_fields) && in_array('prop_category_submit', $submission_page_fields)) { ?>
                 <div class="col-md-3"> 
                     <p>
-                        <label for="show_artistic_discipline"><?php print $category_main_label; ?></label>
+                        <label for="show_artistic_discipline">Disciplina Artistica</label>
                         <?php 
                             $args=array(
                                     'class'       => 'select-submit2',
@@ -200,6 +198,7 @@ foreach ($Usuario as $key => $value) {
                                     'id'          => 'show_artistic_discipline_submit',
                                     'orderby'     => 'NAME',
                                     'order'       => 'ASC',
+                                    'exclude'     => '79',
                                     //'show_option_none'   => esc_html__( 'None','wprentals'),
                                     'taxonomy'    => 'show_tax_artistic_discipline',
                                     'hierarchical'=> true,
@@ -212,7 +211,7 @@ foreach ($Usuario as $key => $value) {
                         ?>
                     </p>
                 </div> 
-            <?php } ?>
+            <?php // } ?>
 <!-- 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
@@ -229,7 +228,7 @@ foreach ($Usuario as $key => $value) {
 
 
         </div>        
-        <?php } ?>
+        <?php // } ?>
         
     
     </div>

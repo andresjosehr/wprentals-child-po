@@ -366,7 +366,7 @@ $mega_details_array =  wpml_mega_details_adjust($edit_id);
             <?php
             
                 if (isset($_GET['isnew']) && ($_GET['isnew']==1 ) ){
-                    print ' <div class="col-md-12 new-listing-alert">'.esc_html__( 'Congratulations, you have just added a new show! Now go and fill in the rest of the details.','wprentals').'</div>';
+                    print ' <div class="col-md-12 new-listing-alert">'.esc_html__( '¡Felicidades, acabas de añadir un nuevo espectáculo! Ahora ve y completa el resto de los detalles.','wprentals').'</div>';
                 }
             
                 if ($action == 'description'){

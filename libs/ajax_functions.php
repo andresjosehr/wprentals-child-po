@@ -1280,24 +1280,24 @@ if( !function_exists('wpestate_update_menu_bar') ):
         
         $menu='<div id="user_menu_open">';
         if($home_url!=$dash_profile){
-            $menu.='  <a href="'.$dash_profile.'" ><i class="fas fa-cog"></i>'. esc_html__( 'My Profile','wprentals').'</a>';   
+            $menu.='  <a href="'.$dash_profile.'" ><i class="fas fa-cog"></i>'. esc_html__( 'Mi perfil','wprentals').'</a>';   
         }
 
         if($home_url!=$dash_link){
-            $menu.=' <a href="'.$dash_link.'" ><i class="fas fa-map-marker"></i>'. esc_html__( 'My Shows','wprentals').'</a>';
+            $menu.=' <a href="'.$dash_link.'" ><i class="fas fa-map-marker"></i>'. esc_html__( 'Mis Shows','wprentals').'</a>';
         }
 
         if($home_url!=$add_link){
-            $menu.='<a href="'.$add_link.'" ><i class="fas fa-plus"></i>'. esc_html__( 'Add New Show','wprentals').'</a>';        
+            $menu.='<a href="'.$add_link.'" ><i class="fas fa-plus"></i>'. esc_html__( 'Añadir nuevo show','wprentals').'</a>';        
         }
 
         if($home_url!=$dash_favorite){
-            $menu.='<a href="'.$dash_favorite.'" class="active_fav"><i class="fas fa-heart"></i>'. esc_html__( 'Favorites','wprentals').'</a>';
+            $menu.='<a href="'.$dash_favorite.'" class="active_fav"><i class="fas fa-heart"></i>'. esc_html__( 'Favoritos','wprentals').'</a>';
         }
 
       
         
-        $menu.='<a href="'.wp_logout_url(wpestate_wpml_logout_url()).'" title="Logout" class="menulogout"><i class="fas fa-power-off"></i>'.esc_html__( 'Log Out','wprentals').'</a>';
+        $menu.='<a href="'.wp_logout_url(wpestate_wpml_logout_url()).'" title="Logout" class="menulogout"><i class="fas fa-power-off"></i>'.esc_html__( 'Cerrar sesión','wprentals').'</a>';
         $menu.='</div>';
         
 
@@ -1495,9 +1495,9 @@ if( !function_exists('wpestate_ajax_register_form') ):
                     update_user_meta($user_id, 'user_type', intval($_POST['user_type']));
                 }
                 if($enable_user_pass_status=='yes' ){
-                    echo json_encode(array('register'=>true,'message'=>esc_html__( 'The account was created. You can login now.','wprentals')));
+                    echo json_encode(array('register'=>true,'message'=>esc_html__( 'La cuenta fue creada, ya puedes iniciar sesión','wprentals')));
                 }else{
-                    echo json_encode(array('register'=>true,'message'=>esc_html__( 'An email with the generated password was sent','wprentals')));
+                    echo json_encode(array('register'=>true,'message'=>esc_html__( 'Te hemos enviado un email a tu correo para continuar','wprentals')));
                 }
 
                 wpestate_update_profile($user_id);

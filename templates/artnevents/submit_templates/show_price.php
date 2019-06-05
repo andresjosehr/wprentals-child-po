@@ -54,7 +54,7 @@ $show_adv_search_general            =   wprentals_get_option('wp_estate_wpestate
 
             <div class="col-md-3"> 
                 <p>
-                   <label for="show_duration"><?php esc_html_e('Format HH:MM. (Example 01:30).','wprentals'); ?> </label>
+                   <label for="show_duration"><?php esc_html_e('Formato HH:MM. (Ejemplo 01:30).','wprentals'); ?> </label>
                    <input type="text" id="show_duration" class="form-control" value="<?php print $show_duration; ?>" size="20" name="show_duration"/>
                 </p>
             </div>    

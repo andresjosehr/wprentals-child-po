@@ -8,6 +8,29 @@
           src="https://code.jquery.com/jquery-3.4.1.js"
           integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
           crossorigin="anonymous"></script>
+
+          <style>
+          	body .vc_custom_1551360722965 {
+			    padding-top: 40px !important;
+			    padding-bottom: 40px !important;
+			}
+          	.social_share_wrapper{
+          		display: none !important;
+          	}
+          	footer .textwidget{
+          		text-align: justify;
+          	}
+          </style>
+          <script>
+              $(document).ready(function(){
+                $(".adv-search-3 #check_in").attr("placeholder", "Fecha");
+                $(".adv-search-3 #show_tax_artistic_discipline_toogle").text("Disciplina Artistica");
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(1) a").html("<i class='fas fa-cog'></i> Mi perfil")
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(2) a").html("<i class='fas fa-map-marker'></i> Mis shows")
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(3) a").html("<i class='fas fa-plus'></i> Añadir nuevo show")
+                
+              })
+          </script>
        
         <?php
 

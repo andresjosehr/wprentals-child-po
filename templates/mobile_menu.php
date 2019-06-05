@@ -43,10 +43,10 @@
             $no_unread=  intval(get_user_meta($userID,'unread_mess',true));
             ?> 
             <ul class="user_mobile_menu_list">
-                <li><a href="<?php print $dash_profile;?>" ><i class="fas fa-cog"></i><?php esc_html_e('My Profile','wprentals');?></a></li>   
+                <li><a href="<?php print $dash_profile;?>" ><i class="fas fa-cog"></i><?php esc_html_e('Mi perfil','wprentals');?></a></li>   
                 <?php if( wpestate_check_user_level() ) { ?>
-                    <li><a href="<?php print $dash_link;?>" ><i class="fas fa-map-marker"></i><?php esc_html_e('My Shows','wprentals');?></a></li>
-                    <li><a href="<?php print $add_link;?>" ><i class="fas fa-plus"></i><?php esc_html_e('Add New Show','wprentals');?></a></li> 
+                    <li><a href="<?php print $dash_link;?>" ><i class="fas fa-map-marker"></i><?php esc_html_e('Mis shows','wprentals');?></a></li>
+                    <li><a href="<?php print $add_link;?>" ><i class="fas fa-plus"></i><?php esc_html_e('Añadir shows','wprentals');?></a></li> 
                 <?php } ?>
                 
                       
@@ -161,7 +161,7 @@
                         print'
                         <div class="acc_radio">
                         <input type="radio" name="acc_type" id="acctype0" value="1" onchange="radio_soy_cliente_mobile()" checked required> 
-                        <div class="radiolabel" for="acctype0">'.esc_html__('I want to book an artist/show','wprentals-child-po').'</div><br>
+                        <div class="radiolabel" for="acctype0">'.esc_html__('Quiero reservar un artista / show','wprentals-child-po').'</div><br>
                         <input type="radio" name="acc_type" id="acctype1" value="0" onchange="radio_soy_artista_mobile()" required>
                         <div class="radiolabel" for="acctype1">'.esc_html__('I´m an artist/company','wprentals').'</div></div> 
                         ';

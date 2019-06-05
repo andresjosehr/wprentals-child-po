@@ -42,7 +42,7 @@ global $submission_page_fields;
 
           <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_clothes"><?php esc_html_e('Mostrar ropa','wprentals'); ?> </label>
+                   <label for="show_clothes"><?php esc_html_e('Vestuario','wprentals'); ?> </label>
                 </p>
             </div>
 
@@ -97,7 +97,7 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_lighting"><?php esc_html_e('Iluminación del espectáculo','wprentals'); ?> 
+                   <label for="show_lighting"><?php esc_html_e('Iluminación propia','wprentals'); ?> 
 
                    </label>
                 </p>
@@ -179,7 +179,7 @@ global $submission_page_fields;
 
             <div class="col-md-3 dashboard_chapter_label"> 
                 <p>
-                   <label for="show_stereo"><?php esc_html_e('Mostrar estereo','wprentals'); ?> </label>
+                   <label for="show_stereo"><?php esc_html_e('Equipo de Música','wprentals'); ?> </label>
                 </p>
             </div>
 

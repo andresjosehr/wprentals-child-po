@@ -2559,6 +2559,7 @@ jQuery(document).ready(function ($) {
 
                 if (data.register === true) {
                     jQuery('#profile_message').empty().append('<div class="login-alert">' + data.message + ', ¡Ya puedes publicar tu primer show!</div>'); 
+                    window.location.href = "user-dashboard/";
                 }else{
                     jQuery('#profile_message').empty().append('<div class="alert_err login-alert">' + data.message + '</div>'); 
                 }
