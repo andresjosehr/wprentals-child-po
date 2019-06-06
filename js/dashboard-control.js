@@ -456,6 +456,7 @@ jQuery(document).ready(function ($) {
     /// confimed booking invoice
     ///////////////////////////////////////////////////////////////////////////////////////
     $('.confirmed_booking').click(function () {
+        alert();
         var invoice_id, booking_id, ajaxurl, acesta, parent;
         booking_id  =   $(this).attr('data-booking-confirmed');
         invoice_id  =   $(this).attr('data-invoice-confirmed');
@@ -472,7 +473,6 @@ jQuery(document).ready(function ($) {
                 'booking_id'        :   booking_id
             },
             success: function (data) {
-               
                 jQuery('.create_invoice_form').remove();
                 parent.after(data);
                 create_payment_action();

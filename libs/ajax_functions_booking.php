@@ -926,7 +926,7 @@ if( !function_exists('wpestate_create_pay_user_invoice_form') ):
                     $enable_direct_pay      =   esc_html ( wprentals_get_option('wp_estate_enable_direct_pay','') );
 
                     if ( $enable_direct_pay=='yes'){
-                        print '<span id="direct_pay_booking" data-propid="'.$property_id.'" data-bookid="'.$bookid.'" data-invoiceid="'.$invoice_id.'">'.esc_html__( 'Wire Transfer','wprentals').'</span>';
+                        print '<span id="direct_pay_booking" data-propid="'.$property_id.'" data-bookid="'.$bookid.'" data-invoiceid="'.$invoice_id.'">'.esc_html__( 'Transferencia bancaria','wprentals').'</span>';
                     }
                   print'
                   </div>

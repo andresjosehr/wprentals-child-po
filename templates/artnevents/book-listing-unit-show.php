@@ -58,29 +58,30 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
 ?>
 
 
-<div class="col-md-12 ">
+
+<div class="col-md-4 " style="margin-top: 30px;">
     <div class="dasboard-prop-listing">
     
-   <div class="blog_listing_image book_image">
+   <div class="blog_listing_image book_image" style="width: 100%;margin-right: 0px !important;">
        
      
         <a href="<?php print esc_url ( get_permalink($booking_id) );?>"> 
             <?php if (has_post_thumbnail($booking_id)){?>
-            <img  src="<?php  print $preview[0]; ?>"  class="img-responsive" alt="slider-thumb" />
+            <img style="margin-right: 0px !important;width: 100%" src="<?php  print $preview[0]; ?>"  class="img-responsive" alt="slider-thumb" />
             <?php 
             
             }else{
                 $thumb_prop_default =  get_stylesheet_directory_uri().'/img/defaultimage_prop.jpg';
                 ?>
            
-                <img  src="<?php  print $thumb_prop_default; ?>"  class="img-responsive" alt="slider-thumb" />
+                <img style="margin-right: 0px !important;width: 100%" src="<?php  print $thumb_prop_default; ?>"  class="img-responsive" alt="slider-thumb" />
             <?php }?>
         </a>
    </div>
     
 
-    <div class="prop-info">
-        <h4 class="listing_title_book">
+    <div class="prop-info" style="width: 100%;">
+        <h4 class="listing_title_book" style="padding-right : 20px;">
             <?php 
             the_title(); 
             print ' <strong>'. esc_html__( 'for','wprentals').'</strong> <a href="'.esc_url (get_permalink($booking_id) ).'">'.get_the_title($booking_id).'</a>'; 
@@ -117,8 +118,8 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
 
 
             <div class="user_dashboard_listed">
-                <span class="booking_details_title"><?php esc_html_e('Pay Amount: ','wprentals');?> </span> <?php print wpestate_show_price_booking ( floatval( get_post_meta($invoice_no, 'item_price', true)) ,$currency,$where_currency,1); ?>  
-                <span class="booking_details_title guest_details"><?php esc_html_e('Members: ','wprentals');?> </span> <?php print $number_members; ?>  
+                <span class="booking_details_title"><?php esc_html_e('Pagar la cantidad: ','wprentals');?> </span> <?php print wpestate_show_price_booking ( floatval( get_post_meta($invoice_no, 'item_price', true)) ,$currency,$where_currency,1); ?>  
+                <span class="booking_details_title guest_details"><?php esc_html_e('Miembros: ','wprentals');?> </span> <?php print $number_members; ?>  
             </div>
 
         
@@ -146,17 +147,17 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
     </div>
 
     
-    <div class="info-container_booking">
+    <div class="info-container_booking" style="display: flex;">
         <?php //print $booking_status;
         if ($booking_status=='confirmed'){
             if($booking_status_full=="confirmed"){
                print '<span class="tag-published">'.esc_html__( 'Confirmed & Fully Paid','wprentals').'</span>';
             }else{
-                print '<span class="tag-published-not-paid">'.esc_html__( 'Confirmed / Not Fully Paid','wprentals').'</span>';
+               // print '<span class="tag-published-not-paid">'.esc_html__( 'Confirmed / Not Fully Paid','wprentals').'</span>';
             }
             if( $author!= $user_login ){
-                print '<span class="tag-published confirmed_booking" data-invoice-confirmed="'.$invoice_no.'" data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'View Details','wprentals').'</span>';
-                print '<span class="cancel_user_booking_show" data-listing-id="'.$booking_id.'"  data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'Cancel booking','wprentals').'</span>';
+                print '<span style="width: 50%; text-align: center" class="tag-published confirmed_booking" data-invoice-confirmed="'.$invoice_no.'" data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'View Details','wprentals').'</span>';
+                print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="cancel_user_booking_show" data-listing-id="'.$booking_id.'"  data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'Cancel booking','wprentals').'</span>';
             
                 
             }else{
@@ -165,12 +166,12 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
             }
       
         }else if( $booking_status=='waiting'){
-            print '<span class="waiting_payment" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Issued ','wprentals').'</span>';             
+            print '<span style="width: 50%; text-align: center" class="waiting_payment" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Issued ','wprentals').'</span>';             
             print '<span class="delete_invoice" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Delete Invoice','wprentals').'</span>';
-            print '<span class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Reject Booking Request','wprentals').'</span>';    
+            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar Reserva','wprentals').'</span>';    
         }else{
-            print '<span class="generate_invoice_show" data-bookid="'.$post->ID.'">'.esc_html__( 'Issue invoice','wprentals').'</span>';  
-            print '<span class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Reject Booking Request','wprentals').'</span>';    
+            print '<span style="width: 50%; text-align: center" class="generate_invoice_show" data-bookid="'.$post->ID.'">'.esc_html__( 'Issue invoice','wprentals').'</span>';  
+            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar Reserva','wprentals').'</span>';    
         } 
        
         ?>

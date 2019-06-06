@@ -49,7 +49,7 @@ if ($price_per_option!=0){
     $property_price     =   round ( $property_price/$price_per_option,2);
 }
 
-$price_per_booking  =   $no_of_days *$property_price;
+// $price_per_booking  =   $no_of_days *$property_price;
 $event_description  =   get_the_content();   
 
 if($invoice_no== 0){
@@ -69,26 +69,32 @@ if ($where_currency == 'before') {
 
 ?>
 
-<div class="col-md-12 ">
+<style type="text/css">
+    .row.admin-list-wrapper.booking_list{
+        max-width: 100%;
+    }
+</style>
+
+<div class="col-md-4 ">
     <div class="dasboard-prop-listing ">
-        <div class="blog_listing_image book_image">
+        <div class="blog_listing_image book_image" style="width: 100%;margin-right: 0px !important;">
            <a href="<?php print esc_url ( get_permalink($booking_id) );?>"> 
             <?php if (has_post_thumbnail($booking_id)){?>
-            <img  src="<?php  print $preview[0]; ?>"  class="img-responsive" alt="slider-thumb" />
+            <img style="margin-right: 0px !important;width: 100%" src="<?php  print $preview[0]; ?>"  class="img-responsive" alt="slider-thumb" />
             <?php 
             
             }else{
                 $thumb_prop_default =  get_stylesheet_directory_uri().'/img/defaultimage_prop.jpg';
                 ?>
            
-                <img  src="<?php  print $thumb_prop_default; ?>"  class="img-responsive" alt="slider-thumb" />
+                <img style="margin-right: 0px !important;width: 100%" src="<?php  print $thumb_prop_default; ?>"  class="img-responsive" alt="slider-thumb" />
             <?php }?>
             </a>
         </div>
 
 
-        <div class="prop-info">
-            <h4 class="listing_title_book">
+        <div class="prop-info" style="width: 100%;">
+            <h4 class="listing_title_book" style="padding-right : 20px;">
                 <?php
                 the_title();  
                 print ' <strong>'. esc_html__( 'for','wprentals').'</strong> <a href="'.esc_url ( get_permalink($booking_id)).'">'.get_the_title($booking_id).'</a>'; 
@@ -126,7 +132,7 @@ if ($where_currency == 'before') {
         </div>
 
 
-        <div class="info-container_booking">
+            <div class="info-container_booking" style="display: flex;">
             <?php
    
             if ($booking_status=='confirmed'){
@@ -134,14 +140,14 @@ if ($where_currency == 'before') {
                     print '<span class="tag-published">'.esc_html__( 'Confirmed & Paid','wprentals').'</span>';
                 }else{
                    // print '<span class="tag-published">'.esc_html__( 'Confirmed','wprentals').'</span>';
-                    print '<span class="proceed-payment_full_show" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Pay Invoice in Full','wprentals').'</span>';                  
+                    print '<span style="width: 50%; text-align: center;" class="proceed-payment_full_show" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Pagar','wprentals').'</span>';                  
               
                 }
                 
                
                 
                 
-                print '<span class="tag-published-details confirmed_booking" data-invoice-confirmed="'.$invoice_no.'" data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'View Details','wprentals').'</span>';       
+               // print '<span class="tag-published-details confirmed_booking" data-invoice-confirmed="'.$invoice_no.'" data-booking-confirmed="'.$post->ID.'">'.esc_html__( 'Detalles','wprentals').'</span>';       
                 
                 
                 if(strtotime($booking_to_date) < time() ){
@@ -151,17 +157,17 @@ if ($where_currency == 'before') {
                         print '<span class="tag-published">'.esc_html__( 'You already reviewed this show!','wprentals').'</span>';
                     }
                 }else{
-                    print '<span class="tag-published">'.esc_html__( 'You can post the review after the show!','wprentals').'</span>'; 
+                    print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="tag-published">'.esc_html__( 'Calificar','wprentals').'</span>'; 
                 }
                 
            
                   
             }else if( $booking_status=='waiting'){
-                print '<span class="proceed-payment_show" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Created - Check & Pay','wprentals').'</span>';                  
-                print '<span class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancel Booking Request','wprentals').'</span>';              
+                print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="proceed-payment_show" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Created - Check & Pay','wprentals').'</span>';                  
+                print '<span class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar Reservacion','wprentals').'</span>';              
             }else{
-                print '<span class="waiting_payment_user" data-bookid="'.$post->ID.'">'.esc_html__( 'Request Pending','wprentals').'</span>';            
-                print '<span class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancel Booking Request','wprentals').'</span>';  
+                print '<span style="width: 50%; text-align: center" class="waiting_payment_user" data-bookid="'.$post->ID.'">'.esc_html__( 'Request Pending','wprentals').'</span>';            
+                print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar Reservacion','wprentals').'</span>';  
 
             } 
 

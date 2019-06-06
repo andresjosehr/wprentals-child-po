@@ -10,17 +10,46 @@
           crossorigin="anonymous"></script>
 
           <style>
-          	body .vc_custom_1551360722965 {
-			    padding-top: 40px !important;
-			    padding-bottom: 40px !important;
-			}
-          	.social_share_wrapper{
-          		display: none !important;
-          	}
-          	footer .textwidget{
-          		text-align: justify;
-          	}
+            body .vc_custom_1551360722965 {
+        	    padding-top: 40px !important;
+        	    padding-bottom: 40px !important;
+        	}
+            .social_share_wrapper{
+            	display: none !important;
+            }
+            footer .textwidget{
+            	text-align: justify;
+            }
+            .row.admin-list-wrapper.booking_list{
+            max-width: 100% !important;
+            }
+            .invoice_table, .invoice_actions {
+                width: 100% !important;
+            }
+            .invoice_actions {
+               margin-top: 20px !important;
+            }
+            .invoice_actions #inv_expense_name{
+               width: 100% !important;
+            }
+
+            .invoice_actions #inv_expense_value, .invoice_actions #inv_expense_discount{
+               width: 83% !important;
+            }
+            .invoice_table{
+                width: 100% !important;
+            }
+            label[for='amount']{
+                color: white;
+            }
+            /*.dasboard-prop-listing{
+                margin-bottom: auto !important;
+            }*/
           </style>
+          <script
+         src="https://code.jquery.com/jquery-2.2.4.min.js"
+         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+         crossorigin="anonymous"></script>
           <script>
               $(document).ready(function(){
                 $(".adv-search-3 #check_in").attr("placeholder", "Fecha");
@@ -28,7 +57,13 @@
                 $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(1) a").html("<i class='fas fa-cog'></i> Mi perfil")
                 $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(2) a").html("<i class='fas fa-map-marker'></i> Mis shows")
                 $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(3) a").html("<i class='fas fa-plus'></i> Añadir nuevo show")
-                
+
+                // $(".dasboard-prop-listing").css("margin-bottom", "0px");
+                setInterval(function(){
+                    var text=$("#amount").text();
+                    var res = text.replace("to", " - ");
+                    $("#amount").text(res);
+                }, 1);
               })
           </script>
        

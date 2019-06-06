@@ -154,9 +154,9 @@ function wpestate_show_price_label_slider($min_price_slider,$max_price_slider,$c
         $max_price_slider   =   number_format($max_price_slider,0,'.',$th_separator);
         
         if ($custom_fields[$i][3] == 'before') {  
-            $price_slider_label = $currency .' '. $min_price_slider.' '.esc_html__( 'to','wprentals').' '.$currency .' '. $max_price_slider;      
+            $price_slider_label = $currency .' '. $min_price_slider.' '.esc_html__( 'a','wprentals').' '.$currency .' '. $max_price_slider;      
         } else {
-            $price_slider_label =  $min_price_slider.' '.$currency.' '.esc_html__( 'to','wprentals').' '.$max_price_slider.' '.$currency;      
+            $price_slider_label =  $min_price_slider.' '.$currency.' '.esc_html__( 'a','wprentals').' '.$max_price_slider.' '.$currency;      
         }
         
     }else{
