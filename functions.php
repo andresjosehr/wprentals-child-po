@@ -351,7 +351,7 @@ function project_dequeue_parent_theme_scripts() {
                     'early_discount'          =>    $early_discount,
                     'rental_type'             =>    wprentals_get_option('wp_estate_item_rental_type'),
                     'book_type'               =>    wprentals_return_booking_type($post->ID),
-                    'policy_booking_check'    =>    esc_html__( 'You have to accept privacy policy.','wprentals'),
+                    'policy_booking_check'    =>    esc_html__( 'Debes aceptar las politicas de privacidad.','wprentals'),
    
                )
         );

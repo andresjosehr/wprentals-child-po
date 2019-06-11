@@ -110,7 +110,7 @@ get_template_part('templates/artnevents/show_header2');
         <div class="panel-wrapper">
             <?php                                       
             if($property_details_text=='') {
-                print'<a class="panel-title" id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.esc_html__( 'Detalles', 'wprentals').'  </a>';
+                print'<a class="panel-title" id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.esc_html__( 'Detalles del espectaculo', 'wprentals').'  </a>';
             }else{
                 print'<a class="panel-title"  id="listing_details" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTree"><span class="panel-title-arrow"></span>'.$property_details_text.'  </a>';
             }
@@ -121,29 +121,11 @@ get_template_part('templates/artnevents/show_header2');
                 </div>
             </div>
         </div>
-
           
-        <!-- property price   -->   
-        <div class="panel-wrapper" id="listing_price">
-            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
-                <?php if($property_price_text!=''){
-                    print $property_price_text;
-                } else{
-                    esc_html_e('Show Price','wprentals');
-                }  ?>
-            </a>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div itemprop="priceSpecification" class="panel-body panel-body-border">
-                    <?php print show_listing_price($post->ID); ?>
-                    <?php  wpestate_show_custom_details($post->ID); ?>
-                    <?php  wpestate_show_custom_details_mobile($post->ID); ?>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="panel-wrapper" id="listing_location">
+          
+          
+          
+          <div class="panel-wrapper" id="listing_location">
             <!-- property address   -->             
             <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTwo">  <span class="panel-title-arrow"></span>
                 <?php if($property_adr_text!=''){
@@ -160,6 +142,28 @@ get_template_part('templates/artnevents/show_header2');
                 </div>
             </div>
         </div>
+          
+          
+
+          
+        <!-- property price   -->   
+        <div class="panel-wrapper" id="listing_price">
+            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
+                <?php if($property_price_text!=''){
+                    print $property_price_text;
+                } else{
+                    esc_html_e('Show Price','wprentals');
+                }  ?>
+            </a>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div itemprop="priceSpecification" class="panel-body panel-body-border">
+                    <?php  print show_listing_price($post->ID); ?>
+                    <?php //  wpestate_show_custom_details($post->ID); ?>
+                    <?php  // wpestate_show_custom_details_mobile($post->ID); ?>
+                </div>
+            </div>
+        </div>
+ 
 
 
         <!-- Features and Amenities -->
@@ -207,7 +211,7 @@ get_template_part('templates/artnevents/show_header2');
         
         
         <?php
-        get_template_part ('/templates/show_avalability');
+      //  get_template_part ('/templates/show_avalability');
     
         wp_reset_query();
         ?>  

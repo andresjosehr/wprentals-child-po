@@ -69,13 +69,10 @@ if ($where_currency == 'before') {
 
 ?>
 
-<style type="text/css">
-    .row.admin-list-wrapper.booking_list{
-        max-width: 100%;
-    }
-</style>
 
-<div class="col-md-4 ">
+
+<div class="col-lg-4 col-xl-4 col-md-4 col-sm-3" style='margin-top:30px;'>
+  
     <div class="dasboard-prop-listing ">
         <div class="blog_listing_image book_image" style="width: 100%;margin-right: 0px !important;">
            <a href="<?php print esc_url ( get_permalink($booking_id) );?>"> 
@@ -164,10 +161,10 @@ if ($where_currency == 'before') {
                   
             }else if( $booking_status=='waiting'){
                 print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="proceed-payment_show" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Created - Check & Pay','wprentals').'</span>';                  
-                print '<span class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar Reservacion','wprentals').'</span>';              
+                print '<span class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar','wprentals').'</span>';              
             }else{
-                print '<span style="width: 50%; text-align: center" class="waiting_payment_user" data-bookid="'.$post->ID.'">'.esc_html__( 'Request Pending','wprentals').'</span>';            
-                print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar Reservacion','wprentals').'</span>';  
+                print '<span style="width: 50%; text-align: center" class="waiting_payment_user" data-bookid="'.$post->ID.'">'.esc_html__( 'Pendiente','wprentals').'</span>';            
+                print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking usercancel" data-bookid="'.$post->ID.'">'.esc_html__( 'Cancelar','wprentals').'</span>';  
 
             } 
 

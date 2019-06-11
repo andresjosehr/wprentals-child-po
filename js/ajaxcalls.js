@@ -2419,6 +2419,16 @@ jQuery(document).ready(function ($) {
     ////////////////////////////////////////////////////////////////////////////////////////////   
 
     $('#update_profile').click(function () {
+      
+      var Route=$("#profile-image").attr("src");
+      var Photo= Route.split("/");
+      
+      if (Photo[Photo.length-1]=="default_user.png") {
+        alert("Debes subir una foto");
+        return false;
+      } 
+
+
 
         var val=false;
         $("small").remove();

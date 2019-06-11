@@ -231,7 +231,7 @@ if($user_custom_picture==''){
         <?php if( $dash_my_bookings!=$home_url && $dash_my_bookings!=""  && wpestate_check_user_level()){ ?>
             <a href="<?php print $dash_my_bookings;?>" class="<?php print $activemybookins; ?>"><i class="far fa-folder-open"></i> <?php esc_html_e('My Bookings','wprentals');?></a>
         <?php } ?>
-        <?php if( $dash_my_reservations!=$home_url  && $dash_my_reservations!="" ){ ?>
+        <?php if( $dash_my_reservations!=$home_url  && $dash_my_reservations!="" && !wpestate_check_user_level()){ ?>
             <a href="<?php print $dash_my_reservations;?>" class="<?php print $activemyreservations; ?>"><i class="fas fa-folder-open"></i> <?php esc_html_e('My Reservations','wprentals');?></a>
         <?php } ?>   
             

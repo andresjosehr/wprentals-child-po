@@ -40,7 +40,7 @@ $rental_type=wprentals_get_option('wp_estate_item_rental_type');
                         
                     </div>
                     
-                    <a href="#listing_calendar" class="check_avalability"><?php esc_html_e('Check Availability','wprentals');?></a>
+                   <!-- <a href="#listing_calendar" class="check_avalability"><?php esc_html_e('Check Availability','wprentals');?></a> -->
                 </div>
                 
               

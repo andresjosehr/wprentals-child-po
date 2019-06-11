@@ -6,7 +6,7 @@
         <a class="property_menu_item" href="#listing_details"><?php esc_html_e('Details','wprentals')?></a>
         <a class="property_menu_item" href="#listing_price"><?php esc_html_e('Price','wprentals')?></a>
         <a class="property_menu_item" href="#listing_location"><?php esc_html_e('Location','wprentals')?></a>
-        <a class="property_menu_item" href="#listing_ammenities"><?php esc_html_e('Extras & Instruments','wprentals')?></a>
+        <a class="property_menu_item" href="#listing_ammenities"><?php esc_html_e('Extras & Instrumentos','wprentals')?></a>
         <a class="property_menu_item" href="#listing_calendar"><?php esc_html_e('Availability','wprentals')?></a>
         <a class="property_menu_item" href="#listing_reviews"><?php esc_html_e('Reviews','wprentals')?></a>
         <!-- <a class="property_menu_item" href="#listing_owner"><?php esc_html_e('Owner','wprentals')?></a> -->

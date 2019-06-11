@@ -299,7 +299,7 @@ if($user_id_picture == '' ){
 
                         
                         <p>
-                            <label for="state"><?php esc_html_e('State','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
+                            <label for="state"><?php esc_html_e('Provincia','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                             <input type="text" id="state"  class="form-control" value="<?php print $state;?>"  name="state">
                         </p>
 
@@ -374,10 +374,7 @@ if($user_id_picture == '' ){
                             print wpestate_country_list(esc_html(get_post_meta($user_agent_id, 'country_invoce', true)), 'form-control', 'country_invoce');?>
                         </p>
 
-                        <p>
-                        <label for="ss_number"><?php esc_html_e('Social Security Number','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
-                        <input type="text" id="ss_number"  class="form-control" value="<?php print $ss_number;?>"  name="ss_number">
-                        </p>
+                        
 
                     </div>
 
@@ -400,11 +397,16 @@ if($user_id_picture == '' ){
                             <option  <?php if($payment_by_hour == 2){ ?> selected="selected" <?php } ?> value="2"> <?php print esc_html__( 'Day','wprentals-core'); ?> </option> 
                         </select>
                     </p> -->
+                       
+                       <p>
+                        <label for="ss_number"><?php esc_html_e('Numero de seguridad social','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
+                        <input type="text" id="ss_number"  class="form-control" value="<?php print $ss_number;?>"  name="ss_number">
+                        </p>
 
-                    <p>
+                 <!-- <p>
                         <label for="fiscal_name"><?php esc_html_e('Nombre Fiscal / Certificado de inscripcion','wprentals');?><span style="font-size: 28px;float: right;margin-left: 5px;margin-top: 4px;"> *</span></label>
                         <input type="text" id="fiscal_name"  class="form-control" value="<?php print $fiscal_name;?>"  name="fiscal_name">
-                        </p>
+                      </p> -->soc
 
                     </div>
 

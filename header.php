@@ -45,6 +45,9 @@
             /*.dasboard-prop-listing{
                 margin-bottom: auto !important;
             }*/
+            .row.admin-list-wrapper.booking_list{
+                max-width: 100%;
+            }
           </style>
           <script
          src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -54,9 +57,21 @@
               $(document).ready(function(){
                 $(".adv-search-3 #check_in").attr("placeholder", "Fecha");
                 $(".adv-search-3 #show_tax_artistic_discipline_toogle").text("Disciplina Artistica");
-                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(1) a").html("<i class='fas fa-cog'></i> Mi perfil")
-                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(2) a").html("<i class='fas fa-map-marker'></i> Mis shows")
-                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(3) a").html("<i class='fas fa-plus'></i> Añadir nuevo show")
+                
+                $("#check_in_widget").attr("placeholder", "Fecha");
+                $("#sidebar-show_tax_artistic_discipline_toogle").text("Disciplina Artistica");
+                $("#start_date").text("Día");
+                
+                
+                
+                
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(1) a").html("<i class='fas fa-cog'></i> Mi perfil");
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(2) a").html("<i class='fas fa-map-marker'></i> Mis shows");
+                $("#wpestate_login_widget-3 .wd_user_menu li:nth-child(3) a").html("<i class='fas fa-plus'></i> Añadir nuevo show");
+                
+                $("#primary #wpestate_login_widget-1 .wd_user_menu li:nth-child(1) a").html("<i class='fas fa-cog'></i> Mi perfil");
+                $("#primary #wpestate_login_widget-1 .wd_user_menu li:nth-child(2) a").html("<i class='fas fa-map-marker'></i> Mis shows");
+                $("#primary #wpestate_login_widget-1 .wd_user_menu li:nth-child(3) a").html("<i class='fas fa-plus'></i> Añadir nuevo show");
 
                 // $(".dasboard-prop-listing").css("margin-bottom", "0px");
                 setInterval(function(){

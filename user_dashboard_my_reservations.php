@@ -114,7 +114,7 @@ if( isset($_POST['wpestate_prop_title']) ){
             </form>    
         </div>    
         
-        <div class="row admin-list-wrapper booking_list">   
+        <div class="row admin-list-wrapper booking_list" style='display:contents'>   
         <?php
         wp_reset_query();
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

@@ -59,13 +59,22 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
 
 
 
-<div class="col-md-4 " style="margin-top: 30px;">
+<div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 30px;">
     <div class="dasboard-prop-listing">
     
    <div class="blog_listing_image book_image" style="width: 100%;margin-right: 0px !important;">
        
      
         <a href="<?php print esc_url ( get_permalink($booking_id) );?>"> 
+           <?php
+          
+     
+          if($to_be_paid>0 && $booking_status_full!='confirmed') { ?>
+                <div class="user_dashboard_listed" style="margin-top: 9px;position: absolute;color: red;background: #ffffffb0;padding-bottom: 10px;padding-top: 10px;">
+                   <strong><?php esc_html_e('Balance: ','wprentals');?> </strong> <?php print $to_be_paid_show.' '.__('to be paid until ','wprentals').' '.$booking_from_date; ?>  
+                   <div style='margin-left:0px;margin-top:5px' class="full_invoice_reminder" data-invoiceid="<?php print $invoice_no; ?>" data-bookid="<?php print $post->ID;?>"><?php esc_html_e('Enviar email de recordatorio!','wprentals');?></div>
+                </div> 
+            <?php } ?>
             <?php if (has_post_thumbnail($booking_id)){?>
             <img style="margin-right: 0px !important;width: 100%" src="<?php  print $preview[0]; ?>"  class="img-responsive" alt="slider-thumb" />
             <?php 
@@ -123,15 +132,7 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
             </div>
 
         
-          <?php
-          
-     
-          if($to_be_paid>0 && $booking_status_full!='confirmed') { ?>
-                <div class="user_dashboard_listed" style="color:red;">
-                   <strong><?php esc_html_e('Balance: ','wprentals');?> </strong> <?php print $to_be_paid_show.' '.__('to be paid until ','wprentals').' '.$booking_from_date; ?>  
-                   <div class="full_invoice_reminder" data-invoiceid="<?php print $invoice_no; ?>" data-bookid="<?php print $post->ID;?>"><?php esc_html_e('Send reminder email!','wprentals');?></div>
-                </div> 
-            <?php } ?>
+        
         
         
             <div class="user_dashboard_listed">
@@ -166,12 +167,12 @@ $price_per_booking         =   wpestate_show_price_booking($booking_array['total
             }
       
         }else if( $booking_status=='waiting'){
-            print '<span style="width: 50%; text-align: center" class="waiting_payment" data-bookid="'.$post->ID.'">'.esc_html__( 'Invoice Issued ','wprentals').'</span>';             
+            print '<span style="width: 50%; text-align: center" class="waiting_payment" data-bookid="'.$post->ID.'">'.esc_html__( 'Aceptar ','wprentals').'</span>';             
             print '<span class="delete_invoice" data-invoiceid="'.$invoice_no.'" data-bookid="'.$post->ID.'">'.esc_html__( 'Delete Invoice','wprentals').'</span>';
-            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar Reserva','wprentals').'</span>';    
+            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar','wprentals').'</span>';    
         }else{
-            print '<span style="width: 50%; text-align: center" class="generate_invoice_show" data-bookid="'.$post->ID.'">'.esc_html__( 'Issue invoice','wprentals').'</span>';  
-            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar Reserva','wprentals').'</span>';    
+            print '<span style="width: 50%; text-align: center" class="generate_invoice_show" data-bookid="'.$post->ID.'">'.esc_html__( 'Aceptar','wprentals').'</span>';  
+            print '<span style="width: 50%; text-align: center;margin-right: 15px;" class="delete_booking" data-bookid="'.$post->ID.'">'.esc_html__( 'Rechazar','wprentals').'</span>';    
         } 
        
         ?>

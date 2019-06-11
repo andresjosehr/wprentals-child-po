@@ -156,28 +156,8 @@ $guest_list= wpestate_get_guest_dropdown('noany');
              
         </div>
         <div id="view_more_desc"><?php esc_html_e('View more','wprentals');?></div>
-     
-          
-        <!-- property price   -->   
-        <div class="panel-wrapper" id="listing_price">
-            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
-                <?php if($property_price_text!=''){
-                    print $property_price_text;
-                } else{
-                    esc_html_e('Property Price','wprentals');
-                }  ?>
-            </a>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body panel-body-border" itemprop="priceSpecification" >
-                    <?php print estate_listing_price($post->ID); ?>
-                    <?php  wpestate_show_custom_details($post->ID); ?>
-                    <?php  wpestate_show_custom_details_mobile($post->ID); ?>
-                </div>
-            </div>
-        </div>
-        
-        
-        
+      
+      
         <div class="panel-wrapper">
             <!-- property address   -->             
             <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseTwo">  <span class="panel-title-arrow"></span>
@@ -196,6 +176,25 @@ $guest_list= wpestate_get_guest_dropdown('noany');
                     <?php print estate_listing_address($post->ID); ?>
                 </div>
                 
+            </div>
+        </div>
+     
+          
+        <!-- property price   -->   
+        <div class="panel-wrapper" id="listing_price">
+            <a class="panel-title" data-toggle="collapse" data-parent="#accordion_prop_addr" href="#collapseOne"> <span class="panel-title-arrow"></span>
+                <?php if($property_price_text!=''){
+                    print $property_price_text;
+                } else{
+                    esc_html_e('Property Price','wprentals');
+                }  ?>
+            </a>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body panel-body-border" itemprop="priceSpecification" >
+                    <?php print estate_listing_price($post->ID); ?>
+                    <?php  wpestate_show_custom_details($post->ID); ?>
+                    <?php  wpestate_show_custom_details_mobile($post->ID); ?>
+                </div>
             </div>
         </div>
       
