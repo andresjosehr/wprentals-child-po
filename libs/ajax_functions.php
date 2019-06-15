@@ -2671,6 +2671,7 @@ add_action( 'wp_ajax_wpestate_ajax_show_login_form', 'wpestate_ajax_show_login_f
 if( !function_exists('wpestate_ajax_show_login_form') ):
 
     function wpestate_ajax_show_login_form(){
+      ?><script>$("div[for='acctype0']").text("Quiero reservar un artista / show")</script><?php
         $type   =   intval($_POST['type']);
         $ispop  =   intval($_POST['ispop']);
         $propid =   intval($_POST['propid']);

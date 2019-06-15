@@ -55,6 +55,7 @@
          crossorigin="anonymous"></script>
           <script>
               $(document).ready(function(){
+                document.getElementById('hero-vid').controls = false
                 $(".adv-search-3 #check_in").attr("placeholder", "Fecha");
                 $(".adv-search-3 #show_tax_artistic_discipline_toogle").text("Disciplina Artistica");
                 
